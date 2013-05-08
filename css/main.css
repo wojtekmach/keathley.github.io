@@ -194,7 +194,7 @@ p {
 
 /*****************************************************************************/
 /*
-/* Posts
+/* Code Snippets
 /*
 /*****************************************************************************/
 
@@ -202,11 +202,10 @@ p {
 #post pre {
   border: 1px solid #ddd;
   background-color: #eef;
-  padding: 0 .4em;
-}
-
-#post ul, #post ol {
-  margin-left: 1.35em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-size: 14px;
 }
 
 #post code {
