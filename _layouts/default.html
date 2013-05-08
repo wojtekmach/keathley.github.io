@@ -17,7 +17,7 @@
       <header class="header">
         <div class="container">
           <section class="name logo">
-            Chris<b>Keathley</b> - {{ site.name }}
+            {{ site.name|split:' '|first }}<b>{{ site.name|split:' '|last }}</b>
           </section>
           <ul class="menu">
             <li>About</li>
@@ -34,20 +34,8 @@
       <section class="container content">
         {{ content }}
       </section>
-      <div class="footer">
-        <div class="contact">
-          <p>
-            Your Name<br />
-            What You Are<br />
-            your@email.com
-          </p>
-        </div>
-        <div class="contact">
-          <p>
-            <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-            <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-          </p>
-        </div>
-      </div>
+      <footer class="footer">
+        <span>Footer stuff goes here</span>
+      </footer>
     </body>
 </html>

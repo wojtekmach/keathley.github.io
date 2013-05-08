@@ -10,28 +10,16 @@
   padding: 0;
 }
 
-html, body { height: 100%; }
+html, body { 
+  height: 100%; 
+}
 
 body {
   background-color: #FFF;
   /*background: #f0fcff;*/
-  font: 13.34px Helvetica, Arial, sans-serif;
+  /*font: 13.34px Helvetica, Arial, sans-serif;*/
+  font-family: 'Raleway', sans-serif;
   font-size: 62.5%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
-
-table {
-  font-size: inherit;
-  font: 100%;
 }
 
 span {
@@ -47,7 +35,6 @@ span {
 .header {
   margin: 0;
   padding: 0;
-  /*background: #2c3747;*/
   background: #2d3538;
   color: white;
 }
@@ -63,7 +50,6 @@ span {
   font-size: 30px;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  /*color: #444;*/
 }
 
 .header ul.menu {
@@ -72,7 +58,6 @@ span {
   font-weight: normal;
   margin: 5px 0;
   color: #acb3b5;
-  /*color: #444;*/
 }
 
 .header ul.menu li {
@@ -81,10 +66,10 @@ span {
 }
 
 .header ul.social {
-  margin: -25px 0 0 0;
+  /*margin: -25px 0 0 0;*/
   padding: 0;
   padding-top: 2px;
-  float: right;
+  /*float: right;*/
 }
 
 .header ul.social li {
@@ -96,19 +81,68 @@ span {
 /* Home
 /*
 /*****************************************************************************/
+.container {
+  width: 650px;
+  margin: 0 auto;
+}
+
 ul.posts {
   list-style-type: none;
-  margin-bottom: 2em;
+  margin-top: 25px;
+  padding: 0;
 }
 
 ul.posts li {
-  line-height: 1.75em;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 15px;
+  padding-bottom: 10px;
 }
 
-ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
+ul.posts li a {
+  color: #444;
+  /*color: #53994b;*/
+}
+
+ul.posts span.date {
+  padding-top: 7px;
+  float: right;
+  color: #444;
+  /*color: #acb3b5;*/
+  font-size: 12px;
+  font-weight: normal;
+}
+
+/*****************************************************************************/
+/*
+/* Content
+/*
+/*****************************************************************************/
+
+p {
+  font-size: 20px;
+  line-height: 160%;
+  margin: 25px 0;
+}
+
+/*****************************************************************************/
+/*
+/* Footer
+/*
+/*****************************************************************************/
+
+.footer {
+  width: 650px;
+  margin-top: 75px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #eeeeee;
 }
 
 /*****************************************************************************/
