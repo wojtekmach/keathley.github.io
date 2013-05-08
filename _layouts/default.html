@@ -11,36 +11,43 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
     </head>
     <body>
-
+      <header class="header">
         <div class="container">
-          <div class="site">
-            <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-              <a class="extra" href="/">home</a>
-            </div>
-     
-                {{ content }}
-
-            <div class="footer">
-              <div class="contact">
-                <p>
-                  Your Name<br />
-                  What You Are<br />
-                  your@email.com
-                </p>
-              </div>
-              <div class="contact">
-                <p>
-                  <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
-                  <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
-                </p>
-              </div>
-            </div>
-
-        </div> <!-- /container -->
-
+          <section class="name logo">
+            Chris<b>Keathley</b> - {{ site.name }}
+          </section>
+          <ul class="menu">
+            <li>About</li>
+            <li>Projects</li>
+            <li>Contact</li>
+          </ul>
+          <ul class="social">
+            <li>Github</li>
+            <li>Twitter</li>
+            <li>Linkedin</li>
+          </ul>
+        </div>
+      </header>
+      <section class="container content">
+        {{ content }}
+      </section>
+      <div class="footer">
+        <div class="contact">
+          <p>
+            Your Name<br />
+            What You Are<br />
+            your@email.com
+          </p>
+        </div>
+        <div class="contact">
+          <p>
+            <a href="http://github.com/yourusername/">github.com/yourusername</a><br />
+            <a href="http://twitter.com/yourusername/">twitter.com/yourusername</a><br />
+          </p>
+        </div>
+      </div>
     </body>
 </html>
