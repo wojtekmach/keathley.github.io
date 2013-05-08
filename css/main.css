@@ -18,7 +18,7 @@ body {
   background-color: #FFF;
   /*background: #f0fcff;*/
   /*font: 13.34px Helvetica, Arial, sans-serif;*/
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 62.5%;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .header .container {
-  width: 650px;
+  width: 720px;
   margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 50px;
@@ -46,6 +46,16 @@ body {
   font-size: 30px;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
+}
+
+.header section.name a {
+  color: white;
+  text-decoration: none;
+  transition: color .25s;
+}
+
+.header section.name a:hover {
+  color: #53994b;
 }
 
 .header ul.menu {
@@ -126,12 +136,12 @@ p {
 }
 
 .byline {
-  border-left: 4px solid #aaa;
-  padding-left: 10px;
+  /*border-left: 4px solid #aaa;*/
+  /*padding-left: 10px;*/
 }
 
 .byline h1 {
-  font-size: 38px;
+  font-size: 32px;
   padding-top: 5px;
   color: #444;
 }
