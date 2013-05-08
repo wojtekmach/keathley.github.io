@@ -22,6 +22,9 @@ body {
   font-size: 62.5%;
 }
 
+/*color: #77cc6d; - light green*/
+/*color: #f0fcff; - light blue*/
+
 /*****************************************************************************/
 /*
 /* Header
@@ -52,6 +55,7 @@ body {
   color: white;
   text-decoration: none;
   transition: color .25s;
+  -webkit-transition: color .25s;
 }
 
 .header section.name a:hover {
@@ -111,6 +115,12 @@ ul.posts li {
 ul.posts li a {
   color: #444;
   /*color: #53994b;*/
+  transition: color .25s;
+  -webkit-transition: color .25s;
+}
+
+ul.posts li a:hover {
+  color: #53994b;
 }
 
 ul.posts span.date {
