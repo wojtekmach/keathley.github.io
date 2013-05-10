@@ -27,6 +27,69 @@ a {
   -webkit-transition: color .25s;
 }
 
+@media screen and (max-width : 650px) {
+
+  .header .container {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+
+  .header ul.social {
+    display: none;
+  }
+
+  .container {
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .content .byline {
+    margin-top: 8%;
+  }
+
+  .footer {
+    margin-top: 75px;
+    padding-top: 30px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #eeeeee;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  
+  .header .container {
+    width: 720px;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: 720px;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  .header ul.menu li {
+    padding-right: 15px;
+  }
+
+  .content div#post {
+    margin-top: 15px;
+  }
+
+  .footer {
+    margin-top: 75px;
+    padding-top: 30px;
+    padding-bottom: 160px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    color: #eeeeee;
+  }
+
+}
+
 /*color: #77cc6d; - light green*/
 /*color: #f0fcff; - light blue*/
 
@@ -37,15 +100,12 @@ a {
 /*****************************************************************************/
 
 .header {
-  margin: 0;
   padding: 0;
   background: #2d3538;
   color: white;
 }
 
 .header .container {
-  width: 720px;
-  margin: 0 auto;
   padding-top: 100px;
   padding-bottom: 50px;
 }
@@ -75,7 +135,6 @@ a {
 
 .header ul.menu li {
   display: inline;
-  padding-right: 15px;
 }
 
 .header ul.social {
@@ -103,12 +162,6 @@ a {
 /* Home
 /*
 /*****************************************************************************/
-.container {
-  width: 720px;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
 ul.posts {
   list-style-type: none;
   margin-top: 25px;
@@ -154,7 +207,7 @@ p {
   font-size: 16px;
   font-weight: 100;
   line-height: 170%;
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .byline {
@@ -173,10 +226,6 @@ p {
   color: #acb3b5;
 }
 
-.content div#post {
-  margin-top: 30px;
-}
-
 /*****************************************************************************/
 /*
 /* Footer
@@ -184,9 +233,6 @@ p {
 /*****************************************************************************/
 
 .footer {
-  margin-top: 75px;
-  padding-top: 30px;
-  padding-bottom: 160px;
   border-top: 1px solid #ddd;
   text-align: center;
   color: #eeeeee;
