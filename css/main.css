@@ -39,6 +39,17 @@ a {
     display: none;
   }
 
+  .header ul.menu {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+
+  .header ul.menu li {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: ;
+  }
+
   .container {
     width: auto;
     margin-left: 5%;
@@ -69,6 +80,11 @@ a {
     width: 720px;
     margin: 0 auto;
     padding-top: 20px;
+  }
+
+  .header ul.menu {
+    font-size: 16px;
+    margin: 5px 0;
   }
 
   .header ul.menu li {
@@ -127,9 +143,7 @@ a {
 
 .header ul.menu {
   font-family: 'Raleway', sans-serif;
-  font-size: 16px;
   font-weight: normal;
-  margin: 5px 0;
   color: #acb3b5;
 }
 
