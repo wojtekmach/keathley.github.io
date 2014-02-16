@@ -10,16 +10,16 @@
   padding: 0;
 }
 
-html, body { 
-  height: 100%; 
+html, body {
+  height: 100%;
 }
 
 body {
   background-color: #FFF;
-  /*background: #f0fcff;*/
-  /*font: 13.34px Helvetica, Arial, sans-serif;*/
-  font-family: 'Raleway', Helvetica, sans-serif;
-  font-size: 62.5%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
+  color: #4C4C4C;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -47,7 +47,6 @@ a {
   .header ul.menu li {
     padding-left: 10px;
     padding-right: 10px;
-    font-size: ;
   }
 
   .container {
@@ -70,14 +69,14 @@ a {
 }
 
 @media screen and (min-width: 650px) {
-  
+
   .header .container {
-    width: 720px;
+    width: 780px;
     margin: 0 auto;
   }
 
   .container {
-    width: 720px;
+    width: 780px;
     margin: 0 auto;
     padding-top: 20px;
   }
@@ -218,9 +217,8 @@ ul.posts span.date {
 /*****************************************************************************/
 
 p {
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 170%;
+  font-size: 18px;
+  line-height: 28px;
   margin: 15px 0;
 }
 
