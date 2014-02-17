@@ -11,7 +11,11 @@ I am prototyping a rails API at work and one of my routes accepts a datetime par
 starting_date = DateTime.parse(params[:starting_date])
 {% endhighlight %}
 
-So of course the first thing that I threw at it was {% highlight ruby %}starting_date=' OR '1'='1{% endhighlight %}
+So of course the first thing that I threw at it was
+
+{% highlight ruby %}
+starting_date=' OR '1'='1
+{% endhighlight %}
 
 And...I got back every row in the database.  How does that work?  Let's dig in.
 
