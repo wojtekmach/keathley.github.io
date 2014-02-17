@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DateTime.parse is not a validater"
-date:   2013-06-24 20:51:13
+date:   2013-06-25 20:51:13
 categories: ruby
 ---
 
