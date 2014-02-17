@@ -102,18 +102,13 @@ a {
     text-align: center;
     color: #eeeeee;
   }
-
 }
-
-/*color: #77cc6d; - light green*/
-/*color: #f0fcff; - light blue*/
 
 /*****************************************************************************/
 /*
 /* Header
 /*
 /*****************************************************************************/
-
 .header {
   padding: 0;
   background: #2d3538;
@@ -151,10 +146,8 @@ a {
 }
 
 .header ul.social {
-  /*margin: -25px 0 0 0;*/
   padding: 0;
   padding-top: 2px;
-  /*float: right;*/
 }
 
 .header ul.social li {
@@ -168,6 +161,11 @@ a {
 
 .header ul.social li a:hover {
   color: #53994b;
+}
+
+.header ul.social li a i {
+  text-align: left;
+  width: 1em;
 }
 
 /*****************************************************************************/
@@ -217,7 +215,7 @@ ul.posts span.date {
 /*****************************************************************************/
 
 p {
-  font-size: 18px;
+  font-size: 19px;
   line-height: 28px;
   margin: 15px 0;
 }
