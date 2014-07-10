@@ -18,13 +18,12 @@ body {
   background-color: #FFF;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: normal;
-  color: #4C4C4C;
+  color: #424242;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  transition: color .25s;
-  -webkit-transition: color .25s;
+  color: #f03838;
 }
 
 @media screen and (max-width : 650px) {
@@ -33,10 +32,6 @@ a {
     width: auto;
     height: auto;
     text-align: center;
-  }
-
-  .header ul.social {
-    display: none;
   }
 
   .header ul.menu {
@@ -111,13 +106,14 @@ a {
 /*****************************************************************************/
 .header {
   padding: 0;
-  background: #2d3538;
-  color: white;
+  /* background: ; */
+  color: #2d3538;
 }
 
 .header .container {
   padding-top: 100px;
   padding-bottom: 50px;
+  border-bottom: 2px solid #f03838;
 }
 
 .header section.name {
@@ -127,12 +123,12 @@ a {
 }
 
 .header section.name a {
-  color: white;
+  color: #424242;
   text-decoration: none;
 }
 
 .header section.name a:hover {
-  color: #53994b;
+  color: #f03838;
 }
 
 .header ul.menu {
@@ -143,29 +139,6 @@ a {
 
 .header ul.menu li {
   display: inline;
-}
-
-.header ul.social {
-  padding: 0;
-  padding-top: 2px;
-}
-
-.header ul.social li {
-  display: inline
-}
-
-.header ul.social li a {
-  color: white;
-  text-decoration: none;
-}
-
-.header ul.social li a:hover {
-  color: #53994b;
-}
-
-.header ul.social li a i {
-  text-align: left;
-  width: 1em;
 }
 
 /*****************************************************************************/
@@ -196,7 +169,7 @@ ul.posts li a {
 }
 
 ul.posts li a:hover {
-  color: #53994b;
+  color: #f03838;
 }
 
 ul.posts span.date {
@@ -215,7 +188,7 @@ ul.posts span.date {
 
 p {
   font-size: 19px;
-  line-height: 28px;
+  line-height: 32px;
   margin: 15px 0;
 }
 
@@ -245,6 +218,33 @@ p {
   border-top: 1px solid #ddd;
   text-align: center;
   color: #eeeeee;
+}
+
+.footer a {
+  color: #424242;
+}
+
+.footer ul.social {
+  padding: 0;
+  padding-top: 2px;
+}
+
+.footer ul.social li {
+  display: inline
+}
+
+.footer ul.social li a {
+  color: #424242;
+  text-decoration: none;
+}
+
+.footer ul.social li a:hover {
+  color: #f03838;
+}
+
+.footer ul.social li a i {
+  text-align: left;
+  width: 1em;
 }
 
 /*****************************************************************************/
