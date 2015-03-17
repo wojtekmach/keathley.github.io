@@ -16,7 +16,9 @@ html, body {
 
 body {
   background-color: #FFF;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /* font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+  /* font-family: "Ubuntu Mono",Inconsolata,"Fira Mono","Source Code Pro",monospace; */
+  font-family: "AtlasTypewriterRegular","Andale Mono","Consolas","Lucida Console","Menlo","Luxi Mono",monospace;
   font-weight: normal;
   color: #424242;
   -webkit-font-smoothing: antialiased;
@@ -66,12 +68,12 @@ a {
 @media screen and (min-width: 650px) {
 
   .header .container {
-    width: 780px;
+    width: 720px;
     margin: 0 auto;
   }
 
   .container {
-    width: 780px;
+    width: 720px;
     margin: 0 auto;
     padding-top: 20px;
   }
@@ -187,8 +189,8 @@ ul.posts span.date {
 /*****************************************************************************/
 
 p {
-  font-size: 19px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 23px;
   margin: 15px 0;
 }
 
