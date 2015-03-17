@@ -1,5 +1,5 @@
 safe: true
 lsi: false
 name: Chris Keathley
-pygments: true
+highlighter: 'pygments'
 markdown: kramdown
