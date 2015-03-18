@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="/css/syntax.css">
-        <link rel="stylesheet" href="/css/main.css" media="screen">
-        <link rel="stylesheet" href="/css/font-awesome.min.css">
-    </head>
-    <body>
-      <header class="header">
-        <div class="container">
-          <section class="name logo">
-            <a href="/">
-              {{ site.name|split:' '|first }}<b>{{ site.name|split:' '|last }}</b>
-            </a>
-          </section>
-        </div>
-      </header>
-      <section class="container content">
-        {{ content }}
-      </section>
-      <footer class="footer">
-        <ul class="social">
-          <li>
-            <a href="https://github.com/spyc3r">
-              <i class="icon-github icon-2x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/ChrisKeathley">
-              <i class="icon-twitter icon-2x"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
-    </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/main.css" media="screen">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/solarized_dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="site-header">
+        <a href="/">
+          Keathley
+        </a>
+      </h1>
+      <nav>
+        <a href="https://github.com/keathley">Github</a>
+        <a href="https://twitter.com/chriskeathley">Twitter</a>
+        <a href="#">RSS</a>
+      </nav>
+    </header>
+    <section class="content">
+      {{ content }}
+    </section>
+    <footer class="footer">
+    </footer>
+  </div>
+</body>
 </html>

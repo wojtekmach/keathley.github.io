@@ -1,0 +1,107 @@
+---
+---
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: #FFF;
+  font-family: "Ubuntu Mono",Inconsolata,"Fira Mono","Source Code Pro",monospace;
+  line-height: 150%;
+  font-weight: normal;
+  color: #424242;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 50em;
+  min-height: 300px;
+  width: 100%;
+  padding-top: 55px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1em;
+}
+
+a {
+  color: #259286;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 100px;
+
+  h1 {
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0;
+
+    a {
+      color: black;
+    }
+  }
+
+  nav {
+    display: inline-block;
+
+    a:last-child:after {
+      content: ' ';
+    }
+
+    a:after {
+      content: '/';
+      padding-left: 4px;
+    }
+  }
+
+  a {
+    color: #3E3E3E;
+    text-decoration: none;
+  }
+}
+
+.posts {
+  padding-left: 0px;
+
+  li {
+    list-style-type: none;
+    padding: 0px 3em;
+
+    h1 {
+      text-transform: uppercase;
+      font-weight: bold;
+      text-decoration: underline;
+      padding: 8px 0;
+    }
+
+    .continue {
+      text-align: center;
+      margin-top: 40px;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#post {
+  padding: 0px 3em;
+  margin-bottom: 50px;
+
+  .date {
+    color: #A2A2A2;
+  }
+}
