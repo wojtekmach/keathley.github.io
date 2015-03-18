@@ -3,3 +3,5 @@ lsi: false
 name: Chris Keathley
 highlighter: 'pygments'
 markdown: kramdown
+description: This is where I think things.  Sometimes it's about code.  Sometimes that code works.
+url: http://keathley.github.io/
