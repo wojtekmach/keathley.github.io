@@ -5,6 +5,6 @@ date:   2015-03-24 11:51:13
 categories: keyboards
 ---
 
-Through a series of unlikely events the keycaps on my Das keyboard ultimate became removed and put back in incorrect positions.  Luckily I found this helpful chart that shows where all of the caps are supposed to go.
+Through a series of unlikely events the keycaps on my [Das Keyboard](http://www.daskeyboard.com/model-s-ultimate/) became removed and re-placed in incorrect positions.  Luckily I found this helpful chart that shows all of the cap positions.
 
 ![DAS Keycap Placement]({{ site.url }}/assets/images/das_keycap_placement.jpg)
