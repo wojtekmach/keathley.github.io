@@ -69,6 +69,10 @@ header {
   a {
     color: #3E3E3E;
     text-decoration: none;
+
+    &:hover {
+      color: #259286;
+    }
   }
 }
 
