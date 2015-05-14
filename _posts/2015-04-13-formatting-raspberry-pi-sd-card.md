@@ -8,7 +8,7 @@ categories: raspberrypi
 I just got a Raspberry Pi 2 for me and my daughter to hack around on.
 
 Part of the process in setting up a Pi is that you need to flash a SD with one of a
-number of custom linux images.  I was following the flashing instructions at https://www.raspberrypi.org/documentation/installation/installing-images/mac.md and I was having real problems with the speed.  I let the device format for about an hour before I just gave up.
+number of custom linux images.  I was following the [official flashing instructions](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) and I was having real problems with the speed.  I let the device format for about an hour before I just gave up.
 
 Quick Pro-tip: You can bonk ctrl+t while the drive is formatting and get a status update from dd.
 
