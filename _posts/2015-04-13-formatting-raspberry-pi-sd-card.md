@@ -1,14 +1,21 @@
 ---
 layout: post
-title:  "Flashing Raspberry pi on Mac"
+title:  "Flashing Raspberry Pi on Mac"
 date:   2015-04-13 11:51:13
 categories: raspberrypi
 ---
 
-I was trying to follow this(https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) document to flash an SD card for my new raspberry pi 2.  I was having real problems with the speed.  I let the device format for about an hour before I just gave up.
+I just got a Raspberry Pi 2 for me and my daughter to hack around on.
 
-Pro-tip: You can bonk ctrl+t while the drive is formatting and get a status update from dd.
+Part of the process in setting up a Pi is that you need to flash a SD with one of a
+number of custom linux images.  I was following the flashing instructions at (https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) and I was having real problems with the speed.  I let the device format for about an hour before I just gave up.
 
-Apparently this speed issue is a known problem and is because the “disk2s1” name that OS X assigns to the sd card is incorrect.  The work around is pretty straight forward.  Simply replace `diskn` with `rdiskn`.
+Quick Pro-tip: You can bonk ctrl+t while the drive is formatting and get a status update from dd.
 
-This will greatly increase your speeds.
+Searching around yielded very little help.  Most answers were something along the lines of "Your SD card reader is probably broken".  However, I finally discovered the culprit.
+
+Apparently on OS X the `disk2s1` name is actually some sort of pointer or symlink to actual name of the drive.  The work around is pretty straight forward:
+
+Simply replace `diskn` with `rdiskn`
+
+`rdiskn` is the actual name of the disk which `diskn` points to.  I'm honestly not sure why this causes such a speed decrease (and it's definitely worth looking into).  Also if anyone knows how to submit a patch to the Raspberry Pi docs please let me know.
