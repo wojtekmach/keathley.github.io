@@ -172,8 +172,12 @@ header {
 }
 
 #post {
-  padding: 0px 3em;
   margin-bottom: 50px;
+	padding: 0 .2em;
+
+	@media screen and (min-width: 500px) {
+	  padding: 0px 3em;
+	}
 
   .title {
     text-align: center;
