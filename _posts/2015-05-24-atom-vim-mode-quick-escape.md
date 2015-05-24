@@ -4,9 +4,7 @@ title:  "Escaping atom vim mode with kj"
 date:   2015-05-24 14:10:00
 categories: Editors Vim Atom
 ---
-I've recently been trying out [Atom](https://atom.io/) and it's [vim mode](https://github.com/atom/vim-mode).  One of the first issues that I ran into when getting set up was quick escaping from insert mode with 'kj' (otherwise known as 'Smash Escaping').
-
-Unfortunately naively trying to remap 'kj' to return to command mode blocks the event incorrectly and keeps you from being able to use the k key correctly.
+I've recently been trying out [Atom](https://atom.io/) and it's [vim mode](https://github.com/atom/vim-mode).  One of the first issues that I ran into was quick escaping from insert mode with 'kj' (otherwise known as 'Smash Escaping'). Unfortunately naively trying to remap 'kj' to return to command mode blocks the event and breaks the 'k' key.
 
 There isn't a solution for this built into vim-mode itself.  However, I discovered a workaround in a few [github issues](https://github.com/atom/vim-mode/issues/334) (credit to [rdlugosz](https://github.com/rdlugosz) for figuring this out).
 
