@@ -1,11 +1,13 @@
 ---
 ---
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700);
+$base-color: #424242;
+$link-color: #DF2050;
 
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
 
 html, body {
   height: 100%;
@@ -13,10 +15,10 @@ html, body {
 
 body {
   background-color: #FFF;
-  font-family: "Ubuntu Mono",Inconsolata,"Fira Mono","Source Code Pro",monospace;
-  line-height: 150%;
+  font-family: "proxima-nova", "Helvetica", "sans-serif";
+  line-height: 155%;
   font-weight: normal;
-  color: #424242;
+  color: $base-color;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -28,33 +30,74 @@ body {
   padding-top: 55px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1em;
+h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 20px;
+}
+
+p {
+  font-size: 18px;
 }
 
 a {
-  color: #259286;
+  color: $link-color;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+code {
+  padding: 1em 2em;
+  font-size: 13px;
+  font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;
+}
+
+p code {
+  color: $link-color;
+  padding: 0.2em;
+  background: #f2f2f2;
+  border: 1px solid #DDD;
+  border-radius: 2px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 
-  h1 {
+  .site-header {
     margin-bottom: 10px;
     letter-spacing: 8px;
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     padding: 0;
 
     a {
-      color: black;
+      color: $base-color;
+			padding-right: 2px;
     }
   }
 
   nav {
     display: inline-block;
+    font-size: 1.2em;
+    font-weight: 500;
 
     a:last-child:after {
       content: ' ';
@@ -62,17 +105,17 @@ header {
 
     a:after {
       content: '/';
-      padding-left: 4px;
+      padding-left: 8px;
     }
+
+		a:hover:after {
+			color: black;
+		}
   }
 
   a {
-    color: #3E3E3E;
+    color: $base-color;
     text-decoration: none;
-
-    &:hover {
-      color: #259286;
-    }
   }
 }
 
@@ -81,14 +124,41 @@ header {
 
   li {
     list-style-type: none;
-    padding: 0px 3em;
+    padding: 12px 0;
+		border-bottom: 1px solid #DDD;
 
-    h1 {
+    .post-title {
       text-transform: uppercase;
       font-weight: bold;
-      text-decoration: underline;
+			font-size: 24px;
       padding: 8px 0;
+			margin: 0;
+
+			a {
+				text-decoration: none;
+				color: $base-color;
+			}
+
+			a:hover {
+				color: $link-color;
+			}
+
+			.date {
+				font-weight: 500;
+				font-size: 14px;
+				padding-left: 5px;
+				float: right;
+			}
     }
+
+		.post-excerpt {
+			margin-top: 0;
+			margin-bottom: 12px;
+
+			p {
+				margin: 0;
+			}
+		}
 
     .continue {
       text-align: center;
@@ -105,13 +175,13 @@ header {
   padding: 0px 3em;
   margin-bottom: 50px;
 
+  .title {
+    text-align: center;
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 30px;
+  }
+
   .date {
     color: #A2A2A2;
-  }
-}
-
-p {
-  code {
-    color: #259286;
   }
 }

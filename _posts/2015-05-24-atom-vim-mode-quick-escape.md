@@ -17,13 +17,13 @@ There isn't a solution for this built into vim-mode itself.  However, I discover
 To get this working you simply need to update your `init.coffee`
 and `keymap.cson` files like so:
 
-{% highlight cson %}
+{% highlight coffee linenos %}
 #keymap.cson
 '.editor.vim-mode.insert-mode':
   'j': 'exit-insert-mode-if-proceeded-by-k'
 {% endhighlight %}
 
-{% highlight coffee %}
+{% highlight coffee linenos %}
 #init.coffee
 atom.commands.add 'atom-text-editor', 'exit-insert-mode-if-proceeded-by-k': (e) ->
   editor = @getModel()
