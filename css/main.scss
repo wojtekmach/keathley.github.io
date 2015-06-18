@@ -2,6 +2,7 @@
 ---
 $base-color: #424242;
 $link-color: #DF2050;
+$break: 48em;
 
 *,
 *:after,
@@ -16,7 +17,8 @@ html, body {
 body {
   background-color: #FFF;
   font-family: "proxima-nova", "Helvetica", "sans-serif";
-  line-height: 155%;
+	line-height: 150%;
+	font-size: 17px;
   font-weight: normal;
   color: $base-color;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +30,7 @@ body {
   min-height: 300px;
   width: 100%;
 
-	@media screen and (min-width: 500px) {
+	@media screen and (min-width: $break) {
 	  padding-top: 55px;
 	  padding-left: 1em;
 	  padding-right: 1em;
@@ -36,33 +38,36 @@ body {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 2em;
+  line-height: 110%;
 	margin-bottom: .5rem;
 }
 
 h2 {
-  font-size: 30px;
-  line-height: 40px;
+  font-size: 1.7em;
+  line-height: 110%;
 	margin-bottom: .5rem;
 }
 
 h3 {
-  font-size: 24px;
-  line-height: 40px;
+	font-size: 1.2em;
+  line-height: 110%;
 	margin-bottom: .5rem;
 }
 
 h4 {
-  font-size: 18px;
-  line-height: 20px;
+	font-size: 1em;
+  line-height: 110%;
 	margin-bottom: .5rem;
 }
 
 p {
-  font-size: 20px;
-	line-height: 150%;
 	margin: 0 0 1rem;
+
+	@media screen and (min-width: $break) {
+	  font-size: 20px;
+		line-height: 150%;
+	}
 }
 
 p + h1,
@@ -90,7 +95,7 @@ code {
   font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;
 }
 
-p code {
+p > code {
   color: $link-color;
   padding: 0.2em;
   background: #f2f2f2;
@@ -99,27 +104,23 @@ p code {
 }
 
 header {
-  margin-bottom: 50px;
-  font-weight: 600;
+	@media screen and (min-width: $break) {
+		margin-bottom: 50px;
+	}
 
   .site-header {
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 1.8em;
 		margin: 0;
-
-    a {
-      color: $base-color;
-    }
   }
 
-  nav {
-    display: inline-block;
-    font-size: 1.2em;
+	h3,
+	h4 {
+		display: inline-block;
+	}
 
-		a:hover:after {
-			color: black;
-		}
+  nav {
+		display: inline-block;
   }
 
   a {
@@ -131,6 +132,7 @@ header {
 
 .posts {
   padding-left: 0px;
+	margin: 0;
 
   li {
     list-style-type: none;
@@ -161,7 +163,7 @@ header {
 				float: right;
 				color: lighten($base-color, 30);
 
-				@media screen and (max-width: 900px) {
+				@media screen and (max-width: $break) {
 					display: none;
 				}
 			}
