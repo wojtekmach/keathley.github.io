@@ -27,38 +27,60 @@ body {
   max-width: 50em;
   min-height: 300px;
   width: 100%;
-  padding-top: 55px;
+
+	@media screen and (min-width: 500px) {
+	  padding-top: 55px;
+	  padding-left: 1em;
+	  padding-right: 1em;
+	}
 }
 
 h1 {
-    font-size: 36px;
-    line-height: 40px;
+  font-size: 36px;
+  line-height: 40px;
+	margin-bottom: .5rem;
 }
 
 h2 {
-    font-size: 30px;
-    line-height: 40px;
+  font-size: 30px;
+  line-height: 40px;
+	margin-bottom: .5rem;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 40px;
+  font-size: 24px;
+  line-height: 40px;
+	margin-bottom: .5rem;
 }
 
 h4 {
-    font-size: 18px;
-    line-height: 20px;
+  font-size: 18px;
+  line-height: 20px;
+	margin-bottom: .5rem;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
+	line-height: 150%;
+	margin: 0 0 1rem;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4 {
+	margin-top: 1.5rem;
 }
 
 a {
   color: $link-color;
+	background-color: transparent;
+	text-decoration: none;
+	transition: box-shadow 0.1s ease-in-out;
 
   &:hover {
     color: $link-color;
+		box-shadow: 0 2px $link-color;
   }
 }
 
@@ -77,36 +99,23 @@ p code {
 }
 
 header {
-  text-align: center;
   margin-bottom: 50px;
+  font-weight: 600;
 
   .site-header {
-    margin-bottom: 10px;
-    letter-spacing: 8px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 0;
+    font-size: 1.8em;
+		margin: 0;
 
     a {
       color: $base-color;
-			padding-right: 2px;
     }
   }
 
   nav {
     display: inline-block;
     font-size: 1.2em;
-    font-weight: 500;
-
-    a:last-child:after {
-      content: ' ';
-    }
-
-    a:after {
-      content: '/';
-      padding-left: 8px;
-    }
 
 		a:hover:after {
 			color: black;
@@ -115,7 +124,8 @@ header {
 
   a {
     color: $base-color;
-    text-decoration: none;
+		margin-right: 6px;
+		margin-left: 6px;
   }
 }
 
@@ -125,13 +135,14 @@ header {
   li {
     list-style-type: none;
     padding: 12px 0;
-		border-bottom: 1px solid #DDD;
+		border-bottom: 1px solid #F0F0F0;
 
     .post-title {
       text-transform: uppercase;
       font-weight: bold;
-			font-size: 24px;
-      padding: 8px 0;
+			font-size: 22px;
+			padding-top: 19px;
+			padding-bottom: 4px;
 			margin: 0;
 
 			a {
@@ -144,10 +155,15 @@ header {
 			}
 
 			.date {
-				font-weight: 500;
+				font-weight: 600;
 				font-size: 14px;
 				padding-left: 5px;
 				float: right;
+				color: lighten($base-color, 30);
+
+				@media screen and (max-width: 900px) {
+					display: none;
+				}
 			}
     }
 
@@ -173,19 +189,8 @@ header {
 
 #post {
   margin-bottom: 50px;
-	padding: 0 .2em;
-
-	@media screen and (min-width: 500px) {
-	  padding: 0px 3em;
-	}
-
-  .title {
-    text-align: center;
-    border-bottom: 1px solid #DDD;
-    padding-bottom: 30px;
-  }
 
   .date {
-    color: #A2A2A2;
+    color: lighten($base-color, 40);
   }
 }
