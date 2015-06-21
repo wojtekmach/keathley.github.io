@@ -10,18 +10,20 @@ $break: 48em;
 	box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  background-color: #FFF;
   font-family: "proxima-nova", "Helvetica", "sans-serif";
 	line-height: 150%;
 	font-size: 17px;
   font-weight: normal;
   color: $base-color;
   -webkit-font-smoothing: antialiased;
+
+  background-color: #FFF;
 }
 
 .container {
@@ -37,35 +39,24 @@ body {
 	}
 }
 
-h1 {
-  font-size: 2em;
-  line-height: 110%;
-	margin-bottom: .5rem;
-}
-
-h2 {
-  font-size: 1.7em;
-  line-height: 110%;
-	margin-bottom: .5rem;
-}
-
-h3 {
-	font-size: 1.2em;
-  line-height: 110%;
-	margin-bottom: .5rem;
-}
-
+h1,
+h2,
+h3,
 h4 {
-	font-size: 1em;
-  line-height: 110%;
-	margin-bottom: .5rem;
+	margin-bottom: 0.5rem;
+	line-height: 110%;
 }
+
+h1 { font-size: 2em; 		}
+h2 { font-size: 1.7em; 	}
+h3 { font-size: 1.2em; 	}
+h4 { font-size: 1em; 		}
 
 p {
-	margin: 0 0 1rem;
+	margin: 0 0 1.25rem;
 
 	@media screen and (min-width: $break) {
-	  font-size: 20px;
+	  font-size: 21px;
 		line-height: 150%;
 	}
 }
@@ -73,14 +64,12 @@ p {
 p + h1,
 p + h2,
 p + h3,
-p + h4 {
-	margin-top: 1.5rem;
-}
+p + h4 { margin-top: 2rem; }
 
 a {
   color: $link-color;
-	background-color: transparent;
 	text-decoration: none;
+	background-color: transparent;
 	transition: box-shadow 0.1s ease-in-out;
 
   &:hover {
@@ -91,13 +80,14 @@ a {
 
 code {
   padding: 1em 2em;
+
   font-size: 13px;
   font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;
 }
 
 p > code {
-  color: $link-color;
   padding: 0.2em;
+  color: $link-color;
   background: #f2f2f2;
   border: 1px solid #DDD;
   border-radius: 2px;
@@ -109,24 +99,21 @@ header {
 	}
 
   .site-header {
+		margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
-		margin: 0;
   }
 
 	h3,
-	h4 {
+	h4,
+	nav {
 		display: inline-block;
 	}
 
-  nav {
-		display: inline-block;
-  }
-
   a {
-    color: $base-color;
 		margin-right: 6px;
 		margin-left: 6px;
+		color: $base-color;
   }
 }
 
@@ -145,26 +132,26 @@ aside > p {
 }
 
 .posts {
+	padding-top: 40px;
   padding-left: 0px;
 	margin: 0;
-	padding-top: 40px;
 
   li {
-    list-style-type: none;
     padding: 12px 0;
+    list-style-type: none;
 		border-bottom: 1px solid #F0F0F0;
 
     .post-title {
-      text-transform: uppercase;
-      font-weight: bold;
-			font-size: 22px;
 			padding-top: 19px;
 			padding-bottom: 10px;
 			margin: 0;
+      font-weight: bold;
+			font-size: 22px;
+		  text-transform: uppercase;
 
 			a {
-				text-decoration: none;
 				color: $base-color;
+				text-decoration: none;
 			}
 
 			a:hover {
@@ -172,11 +159,11 @@ aside > p {
 			}
 
 			.date {
-				font-weight: 600;
-				font-size: 14px;
 				padding-left: 5px;
 				float: right;
 				color: lighten($base-color, 30);
+				font-weight: 600;
+				font-size: 14px;
 
 				@media screen and (max-width: $break) {
 					display: none;
@@ -189,7 +176,7 @@ aside > p {
 			margin-bottom: 12px;
 
 			p {
-				margin: 0;
+				margin-bottom: 0;
 			}
 		}
 

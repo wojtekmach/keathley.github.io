@@ -7,7 +7,6 @@ categories: Keyboards Atreus
 
 I've recently decided to
 
-
 ## Case
 
 The case presents an interesting challenge.  If you get a kit then you get one
