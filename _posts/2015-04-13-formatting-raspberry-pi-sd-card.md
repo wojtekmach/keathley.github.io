@@ -10,7 +10,11 @@ I just got a Raspberry Pi 2 for me and my daughter to hack around on.
 Part of the process in setting up a Pi is that you need to flash a SD with one of a
 number of custom linux images.  I was following the [official flashing instructions](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) and I was having real problems with the speed.  I let the device format for about an hour before I just gave up.
 
+<aside>
+<p>
 Quick Pro-tip: You can bonk ctrl+t while the drive is formatting and get a status update from dd.
+</p>
+</aside>
 
 Searching around yielded very little help.  Most answers were something along the lines of "Your SD card reader is probably broken".  However, I finally discovered the culprit.
 

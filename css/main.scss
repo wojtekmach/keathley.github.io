@@ -130,6 +130,20 @@ header {
   }
 }
 
+aside {
+	$color: lighten($base-color, 10);
+
+	padding: 0.5em 1.25em;
+  margin-bottom: 1em;
+  color: $color;
+  font-weight: 700;
+  box-shadow: inset 0.5em 0 $color;
+}
+
+aside > p {
+	margin-bottom: 0;
+}
+
 .posts {
   padding-left: 0px;
 	margin: 0;
