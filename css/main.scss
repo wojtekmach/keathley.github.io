@@ -1,200 +1,149 @@
 ---
 ---
 $base-color: #424242;
-$link-color: #DF2050;
+$link-color: #df2050;
 $break: 48em;
 
 *,
 *:after,
-*:before {
-	box-sizing: border-box;
-}
+*:before { box-sizing: border-box; }
 
 html,
-body {
-  height: 100%;
-}
+body { height: 100%; }
 
 body {
-  font-family: "proxima-nova", "Helvetica", "sans-serif";
-	line-height: 150%;
-	font-size: 17px;
+  padding-right: 1em;
+  padding-left: 1em;
+  font-family: "freight-text-pro", Georgia, "serif";
+  font-size: 18px;
   font-weight: normal;
+  line-height: 165%;
   color: $base-color;
   -webkit-font-smoothing: antialiased;
 
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 50em;
-  min-height: 300px;
   width: 100%;
-
-	@media screen and (min-width: $break) {
-	  padding-top: 55px;
-	  padding-left: 1em;
-	  padding-right: 1em;
-	}
+  max-width: 42rem;
+  min-height: 300px;
+  margin: 0 auto;
 }
+
+* + * { margin-top: 1rem; }
 
 h1,
 h2,
 h3,
-h4 {
-	margin-bottom: 0.5rem;
-	line-height: 110%;
-}
+h4 { font-family: "proxima-nova", "Helvetica", "sans-serif"; }
 
-h1 { font-size: 2em; 		}
-h2 { font-size: 1.7em; 	}
-h3 { font-size: 1.2em; 	}
-h4 { font-size: 1em; 		}
+h1 { font-size: 2rem;   }
+h2 { font-size: 1.7rem;	}
+h3 { font-size: 1.2rem;	}
+h4 { font-size: 1rem;   }
 
 p {
-	margin: 0 0 1.25rem;
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
 
-	@media screen and (min-width: $break) {
-	  font-size: 21px;
-		line-height: 150%;
-	}
+  + h1,
+	+ h2,
+	+ h3,
+	+ h4 { margin-top: 3rem; }
+
+  > code {
+    padding: 0.2em;
+    color: $link-color;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+  }
 }
 
-p + h1,
-p + h2,
-p + h3,
-p + h4 { margin-top: 2rem; }
 
 a {
   color: $link-color;
-	text-decoration: none;
-	background-color: transparent;
-	transition: box-shadow 0.1s ease-in-out;
+  text-decoration: none;
+  background-color: transparent;
+  transition: box-shadow 0.1s ease-in-out;
 
   &:hover {
     color: $link-color;
-		box-shadow: 0 2px $link-color;
+    box-shadow: 0 2px $link-color;
   }
 }
 
 code {
   padding: 1em 2em;
-
-  font-size: 13px;
   font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;
+  font-size: 0.7rem;
 }
 
-p > code {
-  padding: 0.2em;
-  color: $link-color;
-  background: #f2f2f2;
-  border: 1px solid #DDD;
-  border-radius: 2px;
-}
+
 
 header {
-	@media screen and (min-width: $break) {
-		margin-bottom: 50px;
-	}
-
   .site-header {
-		margin: 0;
-    letter-spacing: 2px;
+    margin: 0;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
-	h3,
+  h3,
 	h4,
-	nav {
-		display: inline-block;
-	}
+	nav { display: inline-block; }
 
   a {
-		margin-right: 6px;
-		margin-left: 6px;
-		color: $base-color;
+    margin-right: 6px;
+    margin-left: 6px;
+    color: $base-color;
   }
 }
 
 aside {
-	$color: lighten($base-color, 10);
+  $color: lighten($base-color, 10);
 
-	padding: 0.5em 1.25em;
+  padding: 0.5em 1.25em;
   margin-bottom: 1em;
-  color: $color;
   font-weight: 700;
+  color: $color;
   box-shadow: inset 0.5em 0 $color;
-}
 
-aside > p {
-	margin-bottom: 0;
+  > p { margin-bottom: 0; }
 }
 
 .posts {
-	padding-top: 40px;
-  padding-left: 0px;
-	margin: 0;
+  padding-left: 0;
+  list-style: none;
 
-  li {
-    padding: 12px 0;
-    list-style-type: none;
-		border-bottom: 1px solid #F0F0F0;
+  .post {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #f0f0f0;
+  }
 
-    .post-title {
-			padding-top: 19px;
-			padding-bottom: 10px;
-			margin: 0;
-      font-weight: bold;
-			font-size: 22px;
-		  text-transform: uppercase;
+  .post-title {
+    margin-bottom: 0;
+    font-size: 1.3em;
 
-			a {
-				color: $base-color;
-				text-decoration: none;
-			}
+    a {
+      color: $base-color;
+      text-decoration: none;
 
-			a:hover {
-				color: $link-color;
-			}
-
-			.date {
-				padding-left: 5px;
-				float: right;
-				color: lighten($base-color, 30);
-				font-weight: 600;
-				font-size: 14px;
-
-				@media screen and (max-width: $break) {
-					display: none;
-				}
-			}
-    }
-
-		.post-excerpt {
-			margin-top: 0;
-			margin-bottom: 12px;
-
-			p {
-				margin-bottom: 0;
-			}
+      &:hover { color: $link-color; }
 		}
 
-    .continue {
-      text-align: center;
-      margin-top: 40px;
+    .date {
+      float: right;
+      margin-top: 0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: lighten($base-color, 30);
 
-      a {
-        text-decoration: none;
-      }
+      @media screen and (max-width: $break) { display: none; }
     }
   }
+
+  .post-excerpt { margin-top: 0.7rem; }
 }
 
-#post {
-  margin-bottom: 50px;
-
-  .date {
-    color: lighten($base-color, 40);
-  }
-}
+#post > .date { color: lighten($base-color, 40); }

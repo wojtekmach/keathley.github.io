@@ -1,0 +1,15 @@
+1) Pull down atreus firmware repo
+2) Pull down the teensy_loader_cli
+3) Update teensy loader make file
+  * Choose mac
+  * Update the sdk version
+  * make
+4) Drop loader into bin directory
+5) Install avr dude
+6) make upload
+7) push the reset button.
+
+http://www.pjrc.com/teensy/loader_mac.html
+http://www.pjrc.com/teensy/loader_cli.html
+https://github.com/PaulStoffregen/teensy_loader_cli
+https://geekhack.org/index.php?topic=54759.60
