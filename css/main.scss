@@ -120,6 +120,8 @@ aside {
   .post {
     padding-bottom: 1em;
     border-bottom: 1px solid #f0f0f0;
+
+    + .post { margin-top: 2.2em; }
   }
 
   .post-title {
