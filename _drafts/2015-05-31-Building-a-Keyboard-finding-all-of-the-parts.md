@@ -5,22 +5,55 @@ date:   2015-05-31 23:00:00
 categories: Keyboards Atreus
 ---
 
+# Building a Keyboard
+
 I decided to build an Atreus keyboard a while ago to try to combat some of the RSI issues that I've been having.  Originally I had sent away for a kit, but it was going to be several weeks before it shipped so I decided to source all of it myself.  
 
-It took a bit of work to get a list of everything that I was going to need together so I thought that I would share hte list that I came up with.  
-
-I've recently decided to
-
+It took a bit of work to get a list of everything that I was going to need together so I thought that I would share the list that I came up with.  
 
 I've always been obsessed with keyboards.  The first large purchase I made when I had a real job was a matte black Das Keyboard Ultimate.  That keyboard has been with me for years now and its served me well.  
 
-Recently I've been starting to have more issues with RSI so I've been looking for more ergonomic replacements.  After doing some research (and seeing pics of Tenderlove's) I decided to check out the Atreus.  If you're familiar with the ergodox its, essentially, a portable version of that.  I sent an email in for a kit but it seemed like it was going to take a bit of time so I decided to source the parts and assemble the kit myself. The experience was really enjoyable so I thought that I would try to document it all here.
+Recently I've been starting to have more issues with RSI so I've been looking for more ergonomic replacements.  After doing some research (and seeing pictures of Tenderlove's keyboard collection) I decided to check out the Atreus.  
 
-# Sourcing the parts
+The Atreus was designed by Phil Halberg (aka. Technomancy) as a portable
+replacement for an ergodox.
+
+Phil offers a kit which is what I originally ordered.  However, there was going
+be some lead time before the kit came in.  Since the Atreus is open source I
+opted to source the parts and assemble a kit myself.
+
+## Sourcing the parts
 
 Finding an up to date list of all of the parts actually took a bit of work (and digging through many geekhack threads.) Here's what I ended up with:
 
 TODO - add list of things here.
+
+## Flashing firmware.
+
+In order to flash the firmware you first need to reset the board.  You can then find the correct usb thingy.
+
+Then you simply run
+
+```
+make upload USB=usb.whatever teh name is
+```
+
+This will automatically upload the firmware to the board.
+
+
+I think that this thing is just going to take some getting used to.  Plus my hands are tired right now so it isn't a great test. Ok.  Bed time.
+
+
+So far I'm really liking the feel of the thing.  I really need to move to a new desk though.  Excited to try it out tomorrow.  It still might be too loud for some people but we'll try to figure it out.  I have to work on that silly stuttering thing that I do when I'm typing.  Maybe I should just focus on being slower but more fluid.
+
+I'm not sure.  Also these probably don't feel as well as clears with brown switches would. But I still really like them.
+
+I decided to run the tmk firmware since it has a few other nice features that the standard atreus firmware is lacking.
+
+This is as easy as just pulling down the repo and uploading the new firmware in the same way that you would normally.
+
+I built a visualizer to show how my layout works.  I'm taking advantage of other macros keys and press hold keys.  I find that this allows you to
+get more use out of all the fewer keys.
 
 
 ## Case
@@ -39,24 +72,16 @@ Keyboard switches are one of the great debates in the hacker world (right next t
 
 ## Keycaps
 
-There is some debate about the benefits of DCS vs DSA keycaps for the Atreus.  Since I hadn't used one before I decided to go with a DCS set since those are what are recomended.
+There is some debate about the benefits of DCS vs DSA keycaps for the Atreus.  Since I hadn't used one before I decided to go with a DCS set since those are what are recomnended.
 
 ## Microcontroller
 
 You can either use the A* micro or the teensy.  While the A* is more supported I decided to go with the teensy since I had experience with them.
 
 
+
+
 # Assembly
-
-
-
-
-
-
-
-
-
-
 
 I have a experience soldering and assembling electronics so I wasn't concerned with that. However, it was somewhat tricky trying to put together an up to date list of all of the parts that I would need.
 
@@ -73,3 +98,14 @@ birch works really well and is easy to work with.  I liked the look of the
 birch but in the end I decided to go with acrylic instead.  It was more inline
 with my personal aesthetics.  I chose the clear 3mm 31x15 acrylic sheet.  That
 may turn out to be a terrible decision.  YMMV
+
+
+
+
+
+## Conclusion
+
+The experience of building my own keyboard was really enjoyable so I thought
+that I would try to document my experience here.
+
+I sent an email in for a kit but it seemed like it was going to take a bit of time so I decided to source the parts and assemble the kit myself. The experience was really enjoyable so I thought that I would try to document it all here.
