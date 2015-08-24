@@ -7,12 +7,12 @@ categories: "Keyboards" "Atreus" "DIY"
 
 # Building a Keyboard
 
-I've always been obsessed with keyboards.  The first large purchase I made when I had a real job was a matte black Das Keyboard Ultimate.  That keyboard has been with me for years now and its served me well.  
+I've always been obsessed with keyboards. The first large purchase I made when I had a "real job" was a matte black [Das Keyboard Ultimate](http://www.daskeyboard.com/model-s-ultimate/) with MX Cherry Blue switches. That keyboard has been with me for years now and its served me well.  
 
-Recently I've been starting to have more issues with RSI so I've been looking for more ergonomic replacements.  After doing some research I decided to check out the Atreus.  The Atreus was designed by Phil Halberg (aka. Technomancy) as a portable replacement for an ergodox.  Its a 40% keyboard but features the same "columnar layout" that the ergodox does.
+Recently I've been having issues with RSI so I've been upgrading my ergonomics. One of those upgrades was an ergonomic keyboard. After doing some research I decided to check out the Atreus. The Atreus was designed by Phil Halberg (aka. Technomancy) as a portable replacement for an ergodox. Its a 40% keyboard but features the same "columnar layout" that the ergodox does.
 
-Phil offers a kit which is what I originally ordered.  However, there was going
-be some lead time before the kit came in.  Since the Atreus is open source I
+Phil offers a kit which is what I originally ordered. However, there was going
+be some lead time before the kit came in. Since the Atreus is open source I
 opted to source the parts and assemble a kit myself.
 
 ## Sourcing the parts
