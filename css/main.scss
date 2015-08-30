@@ -74,6 +74,16 @@ a {
   }
 }
 
+img {
+  width: 100%;
+  display: block;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 0.2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.43),
+              0 5px 9px rgba(0, 0, 0, 0.4);
+}
+
 code {
   padding: 1em 2em;
   font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;

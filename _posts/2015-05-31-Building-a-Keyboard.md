@@ -2,10 +2,8 @@
 layout: post
 title:  "Building an Atreus"
 date:   2015-05-31 23:00:00
-categories: "Keyboards" "Atreus" "DIY"
+categories: Keyboards Atreus DIY
 ---
-
-# Building a Keyboard
 
 I've always been obsessed with keyboards. The first large purchase I made when I had a "real job" was a matte black [Das Keyboard Ultimate](http://www.daskeyboard.com/model-s-ultimate/) with MX Cherry Blue switches. That keyboard has been with me for years now and its served me well.
 
@@ -50,7 +48,7 @@ Some people really like the stiffer feel of the clears. I am not one of those pe
 
 ### Keycaps
 
-There is some debate about the benefits of DCS vs DSA keycaps for the Atreus. Since I hadn't used one before I decided to go with a DSA set since those are what come in the kit. The flatter profile of the DSA caps works very well with Atreus layout. I kept things simple (and cheap) and just picked up the a matte black set from pimpmykeyboard. If you're feeling creative then you should play around with other colors on  http://www.keyboard-layout-editor.com/#/.
+There is some debate about the benefits of DCS vs DSA keycaps for the Atreus. Since I hadn't used one before I decided to go with a DSA set since those are what come in the kit. The flatter profile of the DSA caps works very well with Atreus layout. I kept things simple (and cheap) and just picked up the a matte black set from pimpmykeyboard. If you're feeling creative then you should play around with other colors on [http://www.keyboard-layout-editor.com/#/](http://www.keyboard.layout-editor.com/#/)
 
 ### Microcontroller
 
@@ -58,23 +56,88 @@ You can either use the A\* micro or the teensy. While the A\* is more supported 
 
 ## Assembly
 
-The assembly instructions are well documented on the Atreus site. I thought that I would just include a few photos from my experience.
+The assembly instructions are [well documented](http://atreus.technomancy.us/assembly-hand-wired.pdf) on the Atreus site. Refer there for specifics. Here are some of the highlights from my build.
 
-<img src='images/atreus/atreus-1.jpg' alt='atreus parts'/>
-<img src='images/atreus/atreus-2.jpg' alt='ponoko case'/>
-<img src='images/atreus/atreus-3.jpg' alt='ponoko case details'/>
-<img src='images/atreus/atreus-4.jpg' alt='Dry fit'/>
-<img src='images/atreus/atreus-5.jpg' alt='Dry fit with keycaps'/>
-<img src='images/atreus/atreus-6.jpg' alt='Hot gluing keys in'/>
-<img src='images/atreus/atreus-7.jpg' alt='hot glue finished'/>
-<img src='images/atreus/atreus-8.jpg' alt='start soldering diodes in'/>
-<img src='images/atreus/atreus-9.jpg' alt='stripped wires'/>
-<img src='images/atreus/atreus-10.jpg' alt='soldering wires in'/>
-<img src='images/atreus/atreus-11.jpg' alt='soldering atmel board in'/>
-<img src='images/atreus/atreus-12.jpg' alt='finished case before keycaps'/>
-<img src='images/atreus/atreus-13.jpg' alt='finished with keycaps'/>
-<img src='images/atreus/atreus-14.jpg' alt='detail shot of finished keyboard'/>
-<img src='images/atreus/atreus-15.jpg' alt='finished keyboard with laptop for scale'/>
+<a href='/assets/images/atreus/atreus-1.jpg'>
+  <img src='/assets/images/atreus/atreus-1.jpg' alt='atreus parts'/>
+</a>
+
+I always like to lay out all the bits before I start on a project.
+
+<a href='/assets/images/atreus/atreus-2.jpg'>
+  <img src='/assets/images/atreus/atreus-2.jpg' alt='ponoko case'/>
+</a>
+
+The sheets of acrylic come from ponoko still wrapped in their original paper. There was a lot of extra scrap from the larger acrylic sheet.
+
+<a href='/assets/images/atreus/atreus-3.jpg'>
+  <img src='/assets/images/atreus/atreus-3.jpg' alt='ponoko case details'/>
+</a>
+The individual pieces were easy enough to separate from the rest of the scrap. I kept the paper on for as long as possible to avoid scratches.
+
+<a href='/assets/images/atreus/atreus-4.jpg'>
+  <img src='/assets/images/atreus/atreus-4.jpg' alt='Dry fit'/>
+</a>
+I couldn't resist doing a dry run just to see how it would all fit together.
+
+<a href='/assets/images/atreus/atreus-5.jpg'>
+  <img src='/assets/images/atreus/atreus-5.jpg' alt='Dry fit with keycaps'/>
+</a>
+Tested out a few of the keycaps. I started to suspect that the keys would be too stiff but unfortunately I attributed it to the newness of the switches.
+
+<a href='/assets/images/atreus/atreus-6.jpg'>
+  <img src='/assets/images/atreus/atreus-6.jpg' alt='Hot gluing keys in'/>
+</a>
+First step is to get everything hot glued into place. This helps hold everything together while you're soldering and provides support once the keyboard has been assembled. Once I started laying down glue I realized 2 things.
+
+1) I'm not great at hot glue
+
+2) You can't hide how bad you are at hot glue with clear acrylic.
+
+<a href='/assets/images/atreus/atreus-7.jpg'>
+  <img src='/assets/images/atreus/atreus-7.jpg' alt='hot glue finished'/>
+</a>
+Once the switches were hot glued into place it was time to start soldering.
+
+<a href='/assets/images/atreus/atreus-8.jpg'>
+  <img src='/assets/images/atreus/atreus-8.jpg' alt='start soldering diodes in'/>
+</a>
+I started on all of the rows, soldering each diode point to point. The soldering isn't incredibly difficult but you do need to make sure that you keep things tidy. Otherwise you'll have issues getting everything to fit once the case is on.
+
+<a href='/assets/images/atreus/atreus-9.jpg'>
+  <img src='/assets/images/atreus/atreus-9.jpg' alt='stripped wires'/>
+</a>
+Oh the joys of stripping wire. Seriously this is the worst part of the whole thing. You'll need to strip a wire for each column.
+
+<a href='/assets/images/atreus/atreus-10.jpg'>
+  <img src='/assets/images/atreus/atreus-10.jpg' alt='soldering wires in'/>
+</a>
+Once you're done stripping wire you can start to solder in the columns. Same rules apply. Make sure that you keep everything nice and clean or you'll have issues fitting everything in.
+
+<a href='/assets/images/atreus/atreus-11.jpg'>
+  <img src='/assets/images/atreus/atreus-11.jpg' alt='soldering atmel board in'/>
+</a>
+Once you have all of the columns done you can wire in the controller. The wires can come off of any row in the column so try to optimize your paths as best as you can to avoid excess.
+
+<a href='/assets/images/atreus/atreus-12.jpg'>
+  <img src='/assets/images/atreus/atreus-12.jpg' alt='finished case before keycaps'/>
+</a>
+After all of the soldering is done you can close up the case and give it a try (although it would be best to check all your connections with a multimeter first assuming you have one).
+
+<a href='/assets/images/atreus/atreus-13.jpg'>
+  <img src='/assets/images/atreus/atreus-13.jpg' alt='finished with keycaps'/>
+</a>
+Luckily for me my board worked the first time so I threw on the keycaps.
+
+<a href='/assets/images/atreus/atreus-14.jpg'>
+  <img src='/assets/images/atreus/atreus-14.jpg' alt='detail shot of finished keyboard'/>
+</a>
+The clear acrylic ended up with a few scratches but overall I love the look.
+
+<a href='/assets/images/atreus/atreus-15.jpg'>
+  <img src='/assets/images/atreus/atreus-15.jpg' alt='finished keyboard with laptop for scale'/>
+</a>
+Laptop for scale. Now we're ready to start hacking.
 
 All told it took me the better part of a day to get my keyboard finished up. I have a lot of experience soldering so if you're just getting started then you'll want to take your time and test your connections with a multimeter as you go.
 
@@ -84,7 +147,7 @@ Once you have everything put together you can start hacking on your keyboard's f
 
 In order to keep things simple I initially loaded up [Phil's firmware](https://github.com/technomancy/atreus-firmware). The toolchain is standard avr tools and the repos README walks you through how to get it all set up. The standard Atreus firmware works great, however I wanted to play with some more powerful macros so I decided to give TMK a try.
 
-TMK is, from what I can tell, the community choice for customizing keyboard firmware. Its very feature complete and has support for several useful macros like click vs. hold keys, macros, and layers. Technomancy has a [fork](https://github.com/technomancy/tmk_keyboard) of the tmk library with the atreus included and it works well with a teensy. Uploading it works the same way that the original firmware does. I cut my [own fork](https://github.com/keathley/tmk_keyboard) off of Technomancies version and included my custom layout if you want to check it out.
+TMK is, from what I can tell, the community choice for customizing keyboard firmware. Its very feature complete and has support for several useful macros like click vs. hold keys, macros, and layers. Technomancy has a [fork](https://github.com/technomancy/tmk_keyboard) of the tmk library with the atreus included and it works well with a teensy. Uploading it works the same way that the original firmware does. I cut my [own fork](https://github.com/keathley/tmk_keyboard) off of Technomancie's version and included my custom layout if you want to check it out.
 
 I ended up tweaking the original layout quite a bit changing the original symbol pad/num pad layout to be a more standard number row and symbol row layout. I also take advantage of several click or hold macros.
 
@@ -92,4 +155,4 @@ My suggestion is to keep things simple at first and start to add customizations 
 
 ## After thoughts
 
-I've been using my Atreus at the office for a few weeks now and I'm really enjoying it. The columnar layout is quite comfortable and I love being able to add customizations and macros to optimize my workflow.  If I could go back I would most certainly go with mx cherry browns over the clears. However, despite that I'm happy with how it turned out. A huge thanks to Technomancy for designing such a great keyboard and making it available to the public. Make sure to send him some thanks if you decide to build your own!
+I've been using my Atreus at the office for a few weeks now and I'm really enjoying it. The columnar layout is quite comfortable and I love being able to add customizations and macros to optimize my workflow.  If I could go back I would most certainly go with mx cherry browns over the clears. However, despite my poor choice in switches, I'm happy with how it turned out. A huge thanks to Technomancy for designing such a great keyboard and making it available to the public. Make sure to send him some thanks if you decide to build your own!
