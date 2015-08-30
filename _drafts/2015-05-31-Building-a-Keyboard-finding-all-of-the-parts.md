@@ -58,7 +58,23 @@ You can either use the A\* micro or the teensy. While the A\* is more supported 
 
 ## Assembly
 
-The assembly instructions are well documented on the Atreus site. I thought that I would just include a few photos from my experience (taken with my potato camera).
+The assembly instructions are well documented on the Atreus site. I thought that I would just include a few photos from my experience.
+
+<img src='images/atreus/atreus-1.jpg' alt='atreus parts'/>
+<img src='images/atreus/atreus-2.jpg' alt='ponoko case'/>
+<img src='images/atreus/atreus-3.jpg' alt='ponoko case details'/>
+<img src='images/atreus/atreus-4.jpg' alt='Dry fit'/>
+<img src='images/atreus/atreus-5.jpg' alt='Dry fit with keycaps'/>
+<img src='images/atreus/atreus-6.jpg' alt='Hot gluing keys in'/>
+<img src='images/atreus/atreus-7.jpg' alt='hot glue finished'/>
+<img src='images/atreus/atreus-8.jpg' alt='start soldering diodes in'/>
+<img src='images/atreus/atreus-9.jpg' alt='stripped wires'/>
+<img src='images/atreus/atreus-10.jpg' alt='soldering wires in'/>
+<img src='images/atreus/atreus-11.jpg' alt='soldering atmel board in'/>
+<img src='images/atreus/atreus-12.jpg' alt='finished case before keycaps'/>
+<img src='images/atreus/atreus-13.jpg' alt='finished with keycaps'/>
+<img src='images/atreus/atreus-14.jpg' alt='detail shot of finished keyboard'/>
+<img src='images/atreus/atreus-15.jpg' alt='finished keyboard with laptop for scale'/>
 
 All told it took me the better part of a day to get my keyboard finished up. I have a lot of experience soldering so if you're just getting started then you'll want to take your time and test your connections with a multimeter as you go.
 
