@@ -15,16 +15,16 @@ Phil offers a kit with everything that you need to put an Atreus together. Howev
 
 Finding an up to date list of all of the parts actually took a bit of work (and digging through many geekhack threads.) However, I was eventually able to come up with a complete list:
 
-Qty. | Item Name             | Cost   | Total Cost | Link
----------|-----------------------|--------|------------|-----
-50 | MX cherry clear switches    |  $1.24 |    $62.00  | [digikey](http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&keywords=mx+cherry+clear)
-50 | Diodes 1n4148               |  $0.05 |     $2.50  | [digikey](http://www.digikey.com/product-detail/en/1N4148TA/1N4148TACT-ND/1532747)
-1	 | Base blank DSA keycap set   | $25.00 |    $25.00  | [Pimp My Keyboard](http://keyshop.pimpmykeyboard.com/products/full-keysets/dsa-blank-sets-1)
-1	 | Teensy 2	                   | $16.00	|    $16.00  | [teensy](https://www.pjrc.com/store/teensy.html)
-1	 | Case materials	             | $20.00 |	   $20.00  | [ponoko](https://www.ponoko.com/)
-1	 | USB micro cable             |  $6.99 |     $6.99  | [Amazon](http://www.amazon.com/Cable-Matters%C2%AE-Premium-Hi-Speed-Micro-B/dp/B00IG9LSGM/ref=sr_1_1?s=electronics&ie=UTF8&qid=1433097350&sr=1-1&keywords=usb-cable-micro)
-1	 | MX Red or MX Black switches |  $8.50 |     $8.50  | [mechanicalkeyboards.com](http://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=103)
-1	 | additional 1.5x DSA keycap  |  $6.00 |     $6.00  | [Pimp My Keyboard](http://keyshop.pimpmykeyboard.com/products/blank-key-packs/dcs-1-5-space)
+Qty. | Item Name                   | Cost   | Link
+-----|-----------------------------|--------|------
+50   | MX cherry clear switches    | $62.00 | [digikey](http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&keywords=mx+cherry+clear)
+50   | Diodes 1n4148               |  $2.50 | [digikey](http://www.digikey.com/product-detail/en/1N4148TA/1N4148TACT-ND/1532747)
+1	   | Base blank DSA keycap set   | $25.00 | [Pimp My Keyboard](http://keyshop.pimpmykeyboard.com/products/full-keysets/dsa-blank-sets-1)
+1	   | Teensy 2	                   | $16.00 | [teensy](https://www.pjrc.com/store/teensy.html)
+1	   | Case materials	             | $20.00 | [ponoko](https://www.ponoko.com/)
+1	   | USB micro cable             |  $6.99 | [Amazon](http://www.amazon.com/Cable-Matters%C2%AE-Premium-Hi-Speed-Micro-B/dp/B00IG9LSGM/ref=sr_1_1?s=electronics&ie=UTF8&qid=1433097350&sr=1-1&keywords=usb-cable-micro)
+1	   | MX Red or MX Black switches |  $8.50 | [mechanicalkeyboards](http://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=103)
+1	   | additional 1.5x DSA keycap  |  $6.00 | [Pimp My Keyboard](http://keyshop.pimpmykeyboard.com/products/blank-key-packs/dcs-1-5-space)
 
 **Total Cost:**		$146.99
 
