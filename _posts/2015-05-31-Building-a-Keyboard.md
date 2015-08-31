@@ -7,13 +7,15 @@ categories: Keyboards Atreus DIY
 
 I've always been obsessed with keyboards. The first large purchase I made when I had a "real job" was a matte black [Das Keyboard Ultimate](http://www.daskeyboard.com/model-s-ultimate/) with MX Cherry Blue switches. That keyboard has been with me for years now and its served me well.
 
-Recently I've been having issues with RSI so I decided to see if I could find an ergonomic keyboard. After doing some research I decided to check out the [Atreus](http://atreus.technomancy.us/). The Atreus was designed by [Phil Hagelberg](https://github.com/technomancy) (aka. Technomancy) as a portable replacement for the [Ergodox](http://ergodox.org/). Its a 40% keyboard but features the same "columnar layout" that the ergodox does. The portable design was appealing since I knew that I was going to be carrying my keyboard back and forth from the office every day. Phil offers a kit with everything that you need to put an Atreus together. However, there was going to be some lead time before the kit came in.  So since the Atreus is [open source](https://github.com/technomancy/atreus) I decided to source the parts and assemble a kit myself.
+Recently I've been having issues with RSI so I decided to see if I could find an ergonomic keyboard. After doing some research I decided to check out the [Atreus](http://atreus.technomancy.us/). The Atreus was designed by [Phil Hagelberg](https://github.com/technomancy) (aka. Technomancy) as a portable replacement for the [Ergodox](http://ergodox.org/). Its a 40% keyboard but features the same "columnar layout" that the ergodox does. The portable design was appealing since I knew that I was going to be carrying my keyboard back and forth from the office every day.
+
+Phil offers a kit with everything that you need to put an Atreus together. However, there was going to be some lead time before the kit came in.  So since the Atreus is [open source](https://github.com/technomancy/atreus) I decided to source the parts and assemble a kit myself.
 
 ## Sourcing the parts
 
 Finding an up to date list of all of the parts actually took a bit of work (and digging through many geekhack threads.) However, I was eventually able to come up with a complete list:
 
-Quantity | Item Name             | Cost   | Total Cost | Link
+Qty. | Item Name             | Cost   | Total Cost | Link
 ---------|-----------------------|--------|------------|-----
 50 | MX cherry clear switches    |  $1.24 |    $62.00  | [digikey](http://www.digikey.com/product-search/en?x=0&y=0&lang=en&site=us&keywords=mx+cherry+clear)
 50 | Diodes 1n4148               |  $0.05 |     $2.50  | [digikey](http://www.digikey.com/product-detail/en/1N4148TA/1N4148TACT-ND/1532747)
@@ -24,9 +26,9 @@ Quantity | Item Name             | Cost   | Total Cost | Link
 1	 | MX Red or MX Black switches |  $8.50 |     $8.50  | [mechanicalkeyboards.com](http://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=103)
 1	 | additional 1.5x DSA keycap  |  $6.00 |     $6.00  | [Pimp My Keyboard](http://keyshop.pimpmykeyboard.com/products/blank-key-packs/dcs-1-5-space)
 
-Total Cost		$146.99
+**Total Cost:**		$146.99
 
-You'll also need a soldering iron, hot glue gun, and some small gauge wire (a multi-meter would also be very helpful but isn't a hard requirement). I already had the tools so I didn't include them in my costs.
+You'll also need a soldering iron, hot glue gun, and some small gauge wire (a multi-meter would also be helpful but isn't a requirement). I already had the tools so I didn't include them in my costs.
 
 ### Case
 
@@ -40,7 +42,7 @@ Whatever material you end up getting make sure that its at least 3mm thick. You 
 
 ### Switches
 
-Keyboard switches are one of the great debates in the hacker world. I knew that I was going to be using this in an office setting so while my personal favorite switches are browns I picked up some mx cherry clears for the sake of my co-workers.
+Keyboard switches are one of the great debates in the hacker world. I knew that I was going to be using this in the office so while my personal favorite switches are browns I picked up some mx cherry clears for the sake of my co-workers.
 
 I cannot emphasize how much I regret this decision.  
 
@@ -52,17 +54,17 @@ There is some debate about the benefits of DCS vs DSA keycaps for the Atreus. Si
 
 ### Microcontroller
 
-You can either use the A\* micro or the teensy. While the A\* is more supported I decided to go with the teensy since I had experience with them.
+You can use either the A\* micro or the teensy. While the A\* is more supported I decided to go with the teensy since I had experience with them.
 
 ## Assembly
 
-The assembly instructions are [well documented](http://atreus.technomancy.us/assembly-hand-wired.pdf) on the Atreus site. Refer there for specifics. Here are some of the highlights from my build.
+The assembly instructions are [well documented](http://atreus.technomancy.us/assembly-hand-wired.pdf) on the Atreus site. You should refer there for specifics. But I thought that I would highlight some of my experience.
 
 <a href='/assets/images/atreus/atreus-1.jpg'>
   <img src='/assets/images/atreus/atreus-1.jpg' alt='atreus parts'/>
 </a>
 
-I always like to lay out all the bits before I start on a project.
+Everything layed out, keyboard in potentia.
 
 <a href='/assets/images/atreus/atreus-2.jpg'>
   <img src='/assets/images/atreus/atreus-2.jpg' alt='ponoko case'/>
@@ -112,17 +114,17 @@ Oh the joys of stripping wire. Seriously this is the worst part of the whole thi
 <a href='/assets/images/atreus/atreus-10.jpg'>
   <img src='/assets/images/atreus/atreus-10.jpg' alt='soldering wires in'/>
 </a>
-Once you're done stripping wire you can start to solder in the columns. Same rules apply. Make sure that you keep everything nice and clean or you'll have issues fitting everything in.
+After stripping all the wires I soldered in all of the columns. You'll also have to make sure that the wire's insulation covers any diode leads so you don't create a short. There's a good example of this in the switch on the top left switch. The wire insulation doesn't quite cover the lead.
 
 <a href='/assets/images/atreus/atreus-11.jpg'>
   <img src='/assets/images/atreus/atreus-11.jpg' alt='soldering atmel board in'/>
 </a>
-Once you have all of the columns done you can wire in the controller. The wires can come off of any row in the column so try to optimize your paths as best as you can to avoid excess.
+Last step is to solder in the controller. The wires can come off of any row in the column so try to optimize your paths as best as you can to avoid excess.
 
 <a href='/assets/images/atreus/atreus-12.jpg'>
   <img src='/assets/images/atreus/atreus-12.jpg' alt='finished case before keycaps'/>
 </a>
-After all of the soldering is done you can close up the case and give it a try (although it would be best to check all your connections with a multimeter first assuming you have one).
+Once the soldering was done and I'd checked everything with a multimeter I closed up the case and gave it a try.
 
 <a href='/assets/images/atreus/atreus-13.jpg'>
   <img src='/assets/images/atreus/atreus-13.jpg' alt='finished with keycaps'/>
@@ -140,8 +142,6 @@ The clear acrylic ended up with a few scratches but overall I love the look.
 Laptop for scale. Now we're ready to start hacking.
 
 All told it took me the better part of a day to get my keyboard finished up. I have a lot of experience soldering so if you're just getting started then you'll want to take your time and test your connections with a multimeter as you go.
-
-Once you have everything put together you can start hacking on your keyboard's firmware.
 
 ## Flashing firmware.
 
