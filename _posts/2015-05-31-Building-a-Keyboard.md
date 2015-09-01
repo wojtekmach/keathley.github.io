@@ -9,7 +9,7 @@ I've always been obsessed with keyboards. The first large purchase I made when I
 
 Recently I've been having issues with RSI so I decided to see if I could find an ergonomic keyboard. After doing some research I decided to check out the [Atreus](http://atreus.technomancy.us/). The Atreus was designed by [Phil Hagelberg](https://github.com/technomancy) (aka. Technomancy) as a portable replacement for the [Ergodox](http://ergodox.org/). Its a 40% keyboard but features the same "columnar layout" that the ergodox does. The portable design was appealing since I knew that I was going to be carrying my keyboard back and forth from the office every day.
 
-Phil offers a kit with everything that you need to put an Atreus together. However, there was going to be some lead time before the kit came in.  So since the Atreus is [open source](https://github.com/technomancy/atreus) I decided to source the parts and assemble a kit myself.
+Phil offers a kit with everything that you need to put an Atreus together including a printed circuit board and case. However, there was going to be some lead time before the kit came in.  So since the Atreus is [open source](https://github.com/technomancy/atreus) I decided to source the parts and assemble a kit myself.
 
 ## Sourcing the parts
 
@@ -109,7 +109,7 @@ I started on all of the rows, soldering each diode point to point. The soldering
 <a href='/assets/images/atreus/atreus-9.jpg'>
   <img src='/assets/images/atreus/atreus-9.jpg' alt='stripped wires'/>
 </a>
-Oh the joys of stripping wire. Seriously this is the worst part of the whole thing. You'll need to strip a wire for each column.
+Oh the joys of stripping wire. Seriously this is the worst part of the whole thing. The PCB that comes with the kit eliminates all of this pain, but if you source everything yourself then you'll need to strip a wire for each column.
 
 <a href='/assets/images/atreus/atreus-10.jpg'>
   <img src='/assets/images/atreus/atreus-10.jpg' alt='soldering wires in'/>
