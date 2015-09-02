@@ -189,4 +189,12 @@ aside {
   .post-excerpt { margin-top: 0.7rem; }
 }
 
-#post > .date { color: lighten($base-color, 40); }
+.date {
+  display: inline-block;
+  color: lighten($base-color, 40);
+}
+
+.twitter-share-button {
+  margin-top: 1.5rem;
+  float: right;
+}
