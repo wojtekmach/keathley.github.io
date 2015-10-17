@@ -93,11 +93,9 @@ EctoTest.Post
 
 This query syntax is very powerful. We've managed to encapsulate our domain logic while maintaining very reasonable queries.
 
-Now our domain is encapsulated correctly, and we've
+Queries are easy enough to compose this way, but what happens when we have relationships between models?
 
-Querying in this way has all of the strengths of writing queries
-
-
+Lets see what happens if we add a comment model.
 
 ## Creating the test application
 
