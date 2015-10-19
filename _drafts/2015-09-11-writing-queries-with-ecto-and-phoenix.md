@@ -97,6 +97,12 @@ Queries are easy enough to compose this way, but what happens when we have relat
 
 Lets see what happens if we add a comment model.
 
+``` elixir
+```
+
+``` elixir
+```
+
 ## Creating the test application
 
 First lets create a new application to play with:
