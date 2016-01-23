@@ -1,0 +1,15 @@
+- [ ] Local copy of your slides
+- [ ] Local pdf of slides
+- [ ] Online slides
+- [ ] Online pdf
+- [ ] Thumbdrive slides and pdf
+- [ ] All code is LARGE dark font on light background
+- [ ] Look at the audience and not your slides
+- [ ] New batteries in clicker
+- [ ] Take off name badge
+- [ ] Take deep breaths
+- [ ] Force yourself to talk to someone in the audience
+- [ ] Take a deep breath before you start talking
+- [ ] Sip some water
+- [ ] Disable all the things on your laptop
+- [ ] Disable all the things on your phone
