@@ -7,7 +7,7 @@ categories: elixir phoenix
 
 In Phoenix we have 2 distinct places to put our code: the `web` directory and the `lib` directory. If you’re coming from another framework like Rails then it might be tempting to think of `web` as your `app` directory and `lib` as a junk drawer of miscellaneous modules and tasks.
 
-But remember that Phoenix is just OTP!
+But remember that Phoenix is just [OTP](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)!
 
 In fact the biggest difference between `web` and `lib` is that everything in the `web` directory is hot reloaded. This means that when you change a file in `web` the next time a web request is made that file will be recompiled. 
 
