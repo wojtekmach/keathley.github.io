@@ -9,7 +9,7 @@ In Phoenix we have 2 distinct places to put our code: the `web` directory and th
 
 But remember that Phoenix is just [OTP](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html)!
 
-In fact the biggest difference between `web` and `lib` is that everything in the `web` directory is hot reloaded. This means that when you change a file in `web` the next time a web request is made that file will be recompiled. 
+In fact the biggest difference between `web` and `lib` is that everything in the `web` directory is hot reloaded. This means that when you change a file in `web` the next time a web request is made that file will be recompiled.
 
 What this means in practice is that we can organize our code based on its *state management*.
 
