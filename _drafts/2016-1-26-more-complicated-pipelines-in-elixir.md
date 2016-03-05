@@ -58,3 +58,13 @@ For instance if I decide that I want to change the type of data that I'm using I
 * Now if our data changes we can still use our pipeline of transformations and we'll use the correct implementation based on the data itself.
 
 I wouldn't reach for this method until I was sure that I had well defined domains for my data. But if its something that you have then using protocols and structs is a fantastic solution.
+
+## Problem - Having to care about errors down the line
+
+## Solution - Just don't do it
+
+## Solution - Use bang methods
+
+## Solution - Use a Maybe monad - haha Just kidding
+
+## Solution - Use with
