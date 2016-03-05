@@ -14,14 +14,18 @@ body { height: 100%; }
 body {
   padding-right: 1em;
   padding-left: 1em;
-  font-family: "freight-text-pro", Georgia, "serif";
+  font-family: "proxima-nova", "Helvetica", "sans-serif";
   font-size: 18px;
-  font-weight: normal;
-  line-height: 165%;
+  font-weight: 400;
+  line-height: 180%;
   color: $base-color;
   -webkit-font-smoothing: antialiased;
 
   background-color: #fff;
+
+  @media screen and (min-width: 42rem) {
+    font-size: 20px;
+  }
 }
 
 .container {
@@ -44,8 +48,10 @@ h3 { font-size: 1.2rem;	}
 h4 { font-size: 1rem;   }
 
 p {
-  margin: 0 0 1.25rem;
-  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+  font-size: 1.3rem;
+
+  > a { box-shadow: 0 3px #CCCCCC; }
 
   + h1,
 	+ h2,
@@ -66,15 +72,13 @@ p {
 
 
 a {
-  color: $link-color;
+  color: $base-color;
+  font-weight: 600;
   text-decoration: none;
   background-color: transparent;
-  transition: box-shadow 0.1s ease-in-out;
+  transition: color 0.1s ease;
 
-  &:hover {
-    color: $link-color;
-    box-shadow: 0 2px $link-color;
-  }
+  &:hover { color: $link-color; }
 }
 
 img {
