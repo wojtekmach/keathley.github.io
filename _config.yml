@@ -1,7 +1,7 @@
 safe: true
 lsi: false
 name: Chris Keathley
-highlighter: 'pygments'
+highlighter: 'rouge'
 markdown: kramdown
 description: This is where I think things.  Sometimes it's about code.  Sometimes that code works.
 url: http://keathley.github.io
