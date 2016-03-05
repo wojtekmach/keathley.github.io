@@ -1,218 +1,209 @@
-/**
- * GitHub Gist Theme
- * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
- */
-
-.hljs {
-  display: block;
-  background: white;
-  padding: 0.5em;
-  color: #333333;
-  overflow-x: auto;
-  -webkit-text-size-adjust: none;
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .cm {
+  color: #999988;
+  font-style: italic;
 }
-
-.hljs-comment,
-.bash .hljs-shebang,
-.java .hljs-javadoc,
-.javascript .hljs-javadoc,
-.rust .hljs-preprocessor {
-  color: #969896;
-}
-
-.hljs-string,
-.apache .hljs-sqbracket,
-.coffeescript .hljs-subst,
-.coffeescript .hljs-regexp,
-.cpp .hljs-preprocessor,
-.c .hljs-preprocessor,
-.javascript .hljs-regexp,
-.json .hljs-attribute,
-.makefile .hljs-variable,
-.markdown .hljs-value,
-.markdown .hljs-link_label,
-.markdown .hljs-strong,
-.markdown .hljs-emphasis,
-.markdown .hljs-blockquote,
-.nginx .hljs-regexp,
-.nginx .hljs-number,
-.objectivec .hljs-preprocessor .hljs-title,
-.perl .hljs-regexp,
-.php .hljs-regexp,
-.xml .hljs-value,
-.less .hljs-built_in,
-.scss .hljs-built_in {
-  color: #df5000;
-}
-
-.hljs-keyword,
-.css .hljs-at_rule,
-.css .hljs-important,
-.http .hljs-request,
-.ini .hljs-setting,
-.haskell .hljs-type,
-.java .hljs-javadoctag,
-.javascript .hljs-tag,
-.javascript .hljs-javadoctag,
-.nginx .hljs-title,
-.objectivec .hljs-preprocessor,
-.php .hljs-phpdoc,
-.sql .hljs-built_in,
-.less .hljs-tag,
-.less .hljs-at_rule,
-.scss .hljs-tag,
-.scss .hljs-at_rule,
-.scss .hljs-important,
-.stylus .hljs-at_rule,
-.go .hljs-typename,
-.swift .hljs-preprocessor {
-  color: #a71d5d;
-}
-
-.apache .hljs-common,
-.apache .hljs-cbracket,
-.apache .hljs-keyword,
-.bash .hljs-literal,
-.bash .hljs-built_in,
-.coffeescript .hljs-literal,
-.coffeescript .hljs-built_in,
-.coffeescript .hljs-number,
-.cpp .hljs-number,
-.cpp .hljs-built_in,
-.c .hljs-number,
-.c .hljs-built_in,
-.cs .hljs-number,
-.cs .hljs-built_in,
-.css .hljs-attribute,
-.css .hljs-hexcolor,
-.css .hljs-number,
-.css .hljs-function,
-.haskell .hljs-number,
-.http .hljs-literal,
-.http .hljs-attribute,
-.java .hljs-number,
-.javascript .hljs-built_in,
-.javascript .hljs-literal,
-.javascript .hljs-number,
-.json .hljs-number,
-.makefile .hljs-keyword,
-.markdown .hljs-link_reference,
-.nginx .hljs-built_in,
-.objectivec .hljs-literal,
-.objectivec .hljs-number,
-.objectivec .hljs-built_in,
-.php .hljs-literal,
-.php .hljs-number,
-.python .hljs-number,
-.ruby .hljs-prompt,
-.ruby .hljs-constant,
-.ruby .hljs-number,
-.ruby .hljs-subst .hljs-keyword,
-.ruby .hljs-symbol,
-.rust .hljs-number,
-.sql .hljs-number,
-.puppet .hljs-function,
-.less .hljs-number,
-.less .hljs-hexcolor,
-.less .hljs-function,
-.less .hljs-attribute,
-.scss .hljs-preprocessor,
-.scss .hljs-number,
-.scss .hljs-hexcolor,
-.scss .hljs-function,
-.scss .hljs-attribute,
-.stylus .hljs-number,
-.stylus .hljs-hexcolor,
-.stylus .hljs-attribute,
-.stylus .hljs-params,
-.go .hljs-built_in,
-.go .hljs-constant,
-.swift .hljs-built_in,
-.swift .hljs-number {
-  color: #0086b3;
-}
-
-.apache .hljs-tag,
-.cs .hljs-xmlDocTag,
-.css .hljs-tag,
-.xml .hljs-title,
-.stylus .hljs-tag {
-  color: #63a35c;
-}
-
-.bash .hljs-variable,
-.cs .hljs-preprocessor,
-.cs .hljs-preprocessor .hljs-keyword,
-.css .hljs-attr_selector,
-.css .hljs-value,
-.ini .hljs-value,
-.ini .hljs-keyword,
-.javascript .hljs-tag .hljs-title,
-.makefile .hljs-constant,
-.nginx .hljs-variable,
-.xml .hljs-tag,
-.scss .hljs-variable {
-  color: #333333;
-}
-
-.bash .hljs-title,
-.coffeescript .hljs-title,
-.cpp .hljs-title,
-.c .hljs-title,
-.cs .hljs-title,
-.css .hljs-id,
-.css .hljs-class,
-.css .hljs-pseudo,
-.ini .hljs-title,
-.haskell .hljs-title,
-.haskell .hljs-pragma,
-.java .hljs-title,
-.javascript .hljs-title,
-.makefile .hljs-title,
-.objectivec .hljs-title,
-.perl .hljs-sub,
-.php .hljs-title,
-.python .hljs-decorator,
-.python .hljs-title,
-.ruby .hljs-parent,
-.ruby .hljs-title,
-.rust .hljs-title,
-.xml .hljs-attribute,
-.puppet .hljs-title,
-.less .hljs-id,
-.less .hljs-pseudo,
-.less .hljs-class,
-.scss .hljs-id,
-.scss .hljs-pseudo,
-.scss .hljs-class,
-.stylus .hljs-class,
-.stylus .hljs-id,
-.stylus .hljs-pseudo,
-.stylus .hljs-title,
-.swift .hljs-title,
-.diff .hljs-chunk {
-  color: #795da3;
-}
-
-.coffeescript .hljs-reserved,
-.coffeescript .hljs-attribute {
-  color: #1d3e81;
-}
-
-.diff .hljs-chunk {
+.highlight .cp {
+  color: #999999;
   font-weight: bold;
 }
-
-.diff .hljs-addition {
-  color: #55a532;
-  background-color: #eaffea;
+.highlight .c1 {
+  color: #999988;
+  font-style: italic;
 }
-
-.diff .hljs-deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
+.highlight .cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic;
 }
-
-.markdown .hljs-link_url {
-  text-decoration: underline;
+.highlight .c, .highlight .cd {
+  color: #999988;
+  font-style: italic;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gd {
+  color: #000000;
+  background-color: #ffdddd;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .kc {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kv {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #009999;
+}
+.highlight .mh {
+  color: #009999;
+}
+.highlight .il {
+  color: #009999;
+}
+.highlight .mi {
+  color: #009999;
+}
+.highlight .mo {
+  color: #009999;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #009999;
+}
+.highlight .sb {
+  color: #d14;
+}
+.highlight .sc {
+  color: #d14;
+}
+.highlight .sd {
+  color: #d14;
+}
+.highlight .s2 {
+  color: #d14;
+}
+.highlight .se {
+  color: #d14;
+}
+.highlight .sh {
+  color: #d14;
+}
+.highlight .si {
+  color: #d14;
+}
+.highlight .sx {
+  color: #d14;
+}
+.highlight .sr {
+  color: #009926;
+}
+.highlight .s1 {
+  color: #d14;
+}
+.highlight .ss {
+  color: #990073;
+}
+.highlight .s {
+  color: #d14;
+}
+.highlight .na {
+  color: #008080;
+}
+.highlight .bp {
+  color: #999999;
+}
+.highlight .nb {
+  color: #0086B3;
+}
+.highlight .nc {
+  color: #445588;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #008080;
+}
+.highlight .nd {
+  color: #3c5d5d;
+  font-weight: bold;
+}
+.highlight .ni {
+  color: #800080;
+}
+.highlight .ne {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nf {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #990000;
+  font-weight: bold;
+}
+.highlight .nn {
+  color: #555555;
+}
+.highlight .nt {
+  color: #000080;
+}
+.highlight .vc {
+  color: #008080;
+}
+.highlight .vg {
+  color: #008080;
+}
+.highlight .vi {
+  color: #008080;
+}
+.highlight .nv {
+  color: #008080;
+}
+.highlight .ow {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #000000;
+  font-weight: bold;
+}
+.highlight .w {
+  color: #bbbbbb;
+}
+.highlight {
+  background-color: #f8f8f8;
 }

@@ -1,9 +1,16 @@
 safe: true
 lsi: false
-name: Chris Keathley
-highlighter: 'rouge'
+author: Chris Keathley
 markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
+rouge:
+  line_numbers: true
+line_numbers: true
 description: This is where I think things.  Sometimes it's about code.  Sometimes that code works.
 url: http://keathley.github.io
 gems:
   - octopress-autoprefixer
+  - jekyll-feed

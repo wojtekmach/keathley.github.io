@@ -12,13 +12,13 @@ There isn't a solution for this built into vim-mode itself.  However, I discover
 
 To get smash escape working you'll need to update your `init.coffee` and `keymap.cson` files like so:
 
-{% highlight coffee linenos %}
+```coffee
 #keymap.cson
 '.editor.vim-mode.insert-mode':
   'j': 'exit-insert-mode-if-proceeded-by-k'
-{% endhighlight %}
+```
 
-{% highlight coffee linenos %}
+```coffee
 #init.coffee
 atom.commands.add 'atom-text-editor', 'exit-insert-mode-if-proceeded-by-k': (e) ->
   editor = @getModel()
@@ -30,7 +30,7 @@ atom.commands.add 'atom-text-editor', 'exit-insert-mode-if-proceeded-by-k': (e) 
   else
     editor.backspace()
     atom.commands.dispatch(e.currentTarget, 'vim-mode:activate-command-mode')
-{% endhighlight %}
+```
 
 You'll have to restart atom for this change to take effect.  But once you do you should now be able to smash escape again.  While this change is specific to 'kj', changing the key combo should be straightforward.
 

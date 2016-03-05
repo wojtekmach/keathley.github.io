@@ -2,7 +2,12 @@
 ---
 $base-color: #424242;
 $link-color: #df2050;
-$break: 48em;
+$break: 48rem;
+
+@font-face {
+  font-family: "FiraCode";
+  src: url('/assets/fonts/FiraCode-Retina.otf') format("opentype");
+}
 
 *,
 *:after,
@@ -23,14 +28,14 @@ body {
 
   background-color: #fff;
 
-  @media screen and (min-width: 42rem) {
+  @media screen and (min-width: $break) {
     font-size: 20px;
   }
 }
 
 .container {
   width: 100%;
-  max-width: 42rem;
+  max-width: $break;
   min-height: 300px;
   margin: 0 auto;
 }
@@ -40,7 +45,7 @@ body {
 h1,
 h2,
 h3,
-h4 { font-family: "proxima-nova", "Helvetica", "sans-serif"; }
+h4 { font-weight: 600; }
 
 h1 { font-size: 2rem;   }
 h2 { font-size: 1.7rem;	}
@@ -91,11 +96,18 @@ img {
               0 5px 9px rgba(0, 0, 0, 0.4);
 }
 
+pre > code { display: block; }
+
 code {
-  padding: 1em 2em;
-  font-family: "Menlo",Inconsolata,"Fira Mono","Source Code Pro",monospace;
-  font-size: 0.8rem;
-  line-height: 175%;
+  font-family: "FiraCode", "Menlo", Inconsolata, "Fira Mono", "Source Code Pro", monospace;
+  font-size: 0.9rem;
+  font-feature-settings: "calt" 1;
+  font-variant-ligatures: contextual;
+  text-rendering: optimizeLegibility;
+  line-height: 160%;
+  overflow-x: auto;
+  padding: 0.8rem 1.1rem;
+  outline: none;
 }
 
 table {
