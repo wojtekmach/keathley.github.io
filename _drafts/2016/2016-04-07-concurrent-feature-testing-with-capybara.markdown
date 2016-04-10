@@ -4,6 +4,31 @@ title: "concurrent-feature-testing-with-capybara"
 date: "2016-04-07 22:05"
 ---
 
+Wallaby is a feature testing library for Elixir and Phoenix applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Feature tests are one of the best ways to ensure reliability and such.
 
 For all our Rails applications we use a combination of Rspec and Capybara.
