@@ -4,17 +4,15 @@ title: "elixir-functions-in-guards"
 date: "2016-04-09 20:29"
 ---
 
-Lets say that we have a user:
+Elixir, like other pattern matched languages, supports guard clauses. Inside a guard we can use a set of Kernel functions and other predicates. If any other function is used in a guard clause it results in an error. Here's an example to show what I mean:
+
+Lets say that we have a user and we want to produce a greeting for that user depending on how old the user is:
 
 ```elixir
 defmodule User do
   defstruct age: 0
 end
-```
 
-And we want to produce a greeting for that user depending on how old the user is:
-
-```elixir
 defmodule Greeting do
   def greet(%{age: age}) when 6 < age and age < 12, do: "Hiya"
   def greet(%{age: age}) when 12 < age and age < 18, do: "Whatever"
@@ -23,7 +21,7 @@ defmodule Greeting do
 end
 ```
 
-This certainly works, but it would be nice if we could encapsulate each of those guard clauses into a re-usable function:
+It would be nice if we could encapsulate each of those guard clauses into a re-usable function. Something like this:
 
 ```elixir
 defmodule User do
@@ -50,7 +48,7 @@ defmodule Greeting do
 end
 ```
 
-However, if we try to run this we get:
+But if we try to run this code we get an error:
 
 ```console
 > elixir guards.exs
@@ -58,39 +56,43 @@ However, if we try to run this we get:
     guards.exs:18: (module)
 ```
 
-It turns out that Elixir only allows a subset of "blessed" built-in functions inside guard clauses. There are ways around this issue, but to fully understand the *reason* behind this decision we need to understand Elixir's pattern matching, functional purity, and a bit of the history of Erlang.
+What Elixir is telling us is that we can't use the functions that we've defined inside of a guard clause. But does that make any sense? `is_list/1` and `is_binary/1` are functions and we can use those in guards. Why can't we use functions that we define?
+
+To fully understand the reason behind this decision we need to understand functional purity, Elixir's pattern matching, and a bit of Erlang's history.
 
 ## Purity and Side effects
 
-Purity is a term thats used a lot in functional programming circles. Without getting too rigorous a function is "pure" if it:
+Purity is a oft used term in functional programming circles. Without getting too rigorous a function is "pure" if it:
 
-1) Always returns the same result given the same argument
-2) Has no side effects.
+1. Always returns the same result given the same argument
+2. Has no side effects.
 
-The first clause is easy enough to understand so lets focus on the second clause. Side effects in this case refer to modifying state or interacting with the outside world. This could involve reading some state from an ETS table, talking to another process, or reading some data off the disk.
+The first clause is easy enough to understand so lets focus on the second.
 
-Elixir, much like Erlang, isn't a "pure" language in the sense that we're describing here. Thats OK. We rely heavily on being able to perform IO, send messages between processes, etc.
+Side effects in this case refer to modifying state or interacting with the outside world. This could involve reading some state from an ETS table, talking to another process, or reading some data off a disk. Elixir, much like Erlang, isn't a "pure" language in the sense that we're describing here. Thats OK. We rely heavily on performing IO, sending messages between processes, interacting with filesystems. Its a crucial part of Elixir and Erlang's usability.
 
-But it does mean that we can't **rely** on all Elixir functions being pure.
+This doesn't mean that Elixir functions can't be pure. In fact, most people (myself included) will tell you that you should try to write pure functions whenever possible. But it does mean that we can't **rely** on Elixir functions being pure.
 
-## How does pattern matching even work?
+## Elixir's pattern matching
 
-Elixir relies on Erlang and BEAM whenever possible. In fact one of Elixir's core design tenants is to never re-invent a solution to a problem that Erlang has already solved. Pattern matching is no exception.
+Elixir relies on Erlang and BEAM whenever possible. In fact one of Elixir's core design tenants is to never re-invent a solution to a problem Erlang has already solved. Pattern matching is no exception.
 
-Rather then recreate a pattern matching system, Elixir uses Erlang's. Because of this Elixir can take advantage of the optimizations and efficiencies built into Erlang's pattern matching. But it also means that it has to obey the same rules. In this case it means that it has to follow the same rules about guards.
+Rather then recreate a pattern matching system Elixir uses Erlang's. Because of this Elixir gets the optimizations and efficiencies already built into Erlang's pattern matching. But it also means that it has to obey the same rules. In this case it means that Elixir's guard clauses have to follow Erlang's rules about guard clauses.
 
 ## A long time ago...
 
 The creators of Erlang knew that if you wanted to allow for functions inside a guard clause then you would have to ensure that those functions were:
 
-1) fast
-2) pure
+1. Fast
+2. Pure
 
-There's no trivial way to verify this in Erlang. Instead it was decided to limit the functions that could be used in a guard clause to those functions that **could** be guaranteed to be both fast and pure.
+There's no trivial way to verify functional purity in Erlang. So instead the creators decided to limit guard clauses to internal functions. That way they could ensure that these functions were both fast and pure.
 
-## Defining our own guards
+This is why we get errors when we try to use our own functions in guard clauses. Erlang has no way of knowing if that function is safe. Instead it simply stops you from using the function at all.
 
-We can't use any old function in guard clauses, but that doesn't mean that we're totally out of options. As long as we confine ourselves to using the built-in functions we can achieve what we want with macros!
+## Defining our own guards - Macros FTW.
+
+We can't use any old function in guard clauses, but that doesn't mean that we're totally out of options. As long as we confine ourselves to the built-in functions and predicates we can achieve what we want with macros!
 
 Instead of defining `kid?/1`, `teen?/1`, and `elder?/1` as a functions we can define them as macros:
 
@@ -121,10 +123,12 @@ defmodule Greeting do
 end
 ```
 
-When this code is compiled each of the macros will be replaced with the valid predicate. This avoids the compilation error ensures that we're still using pure functions in our guard clause and allows us to add some extra domain knowledge to our guard clause.
+When this code is compiled each of the macros will be replaced with the valid predicate. We can still encapsulate our domain logic and because we're using the available operators we don't have a compilation error.
 
 ## Conclusion
 
-Programming is a discipline of tradeoffs. Understanding those tradeoffs is crucial to understanding the solutions in a language. Erlang made a tradeoff and decided that programmers should embrace communication over functional purity. That one decision has ripple effects through the entire language.
+Programming is a discipline concerned with tradeoffs. Its easy to get frustrated when we encounter a confusing error message or some unexpected behaviour. Once we think through the tradeoffs though its often apparent why the solutions were chosen in the first place.
+
+Erlang made a tradeoff and decided that programmers should embrace communication over functional purity. That one decision has ripple effects through the entire language.
 
 Personally I think thats fascinating as hell.
