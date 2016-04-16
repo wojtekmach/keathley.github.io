@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "Why you can't use your own functions in Elixir guard clauses"
+title: "Using Functions in Elixir Guard Clauses"
 date: "2016-04-09 20:29"
 ---
 
