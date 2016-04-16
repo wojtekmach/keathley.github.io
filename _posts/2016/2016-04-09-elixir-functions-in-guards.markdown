@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "elixir-functions-in-guards"
+title: "Using functions in elixir guard clauses"
 date: "2016-04-09 20:29"
 ---
 
