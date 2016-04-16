@@ -75,7 +75,7 @@ This doesn't mean that Elixir functions **can't** be pure. In fact, most people 
 
 ## Elixir's pattern matching
 
-Elixir relies on Erlang and BEAM whenever possible. In fact one of Elixir's core design tenants is to never re-invent a solution to a problem Erlang has already solved. Pattern matching is no exception.
+Elixir relies on Erlang and BEAM whenever possible. In fact one of Elixir's core design tenets is to never re-invent a solution to a problem Erlang has already solved. Pattern matching is no exception.
 
 Rather then recreate a pattern matching system Elixir uses Erlang's. Because of this Elixir gets the optimizations and efficiencies already built into Erlang's pattern matching. But it also means that it has to obey Erlang's rules.
 
