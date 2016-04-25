@@ -50,7 +50,7 @@ end
 
 But if we try to run this code we get an error:
 
-```console
+```
 > elixir guards.exs
 ** (CompileError) guards.exs:18: cannot invoke local kid?/1 inside guard
     guards.exs:18: (module)
