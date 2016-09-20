@@ -107,21 +107,22 @@ This is why we get errors when we try to use our own functions in guard clauses.
 
 We can't use any old function in guard clauses, but that doesn't mean that we're totally out of options. As long as we confine ourselves to the built-in functions and predicates that Elixir provides then we can achieve what we want with macros!
 
-Instead of defining `kid?/1`, `teen?/1`, and `elder?/1` as a functions we can define them as macros:
+Instead of defining `kid?/1`, `teen?/1`, and `elder?/1` as a functions we can define them as macros (and use the standard
+guard clause `is_foo` naming convention):
 
 ```elixir
 defmodule User do
   defstruct age: 0
 
-  defmacro kid?(age) do
+  defmacro is_kid(age) do
     quote do: 6 < unquote(age) and unquote(age) < 12
   end
 
-  defmacro teen?(age) do
+  defmacro is_teen(age) do
     quote do: 12 < unquote(age) and unquote(age) < 18
   end
 
-  defmacro elder?(age) do
+  defmacro is_elder(age) do
     quote do: 60 < unquote(age)
   end
 end
@@ -129,9 +130,9 @@ end
 defmodule Greeting do
   import User
 
-  def greet(%{age: age}) when kid?(age), do: "Hiya"
-  def greet(%{age: age}) when teen?(age), do: "Whatever"
-  def greet(%{age: age}) when elder?(age), do: "You kids get off my lawn"
+  def greet(%{age: age}) when is_kid(age), do: "Hiya"
+  def greet(%{age: age}) when is_teen(age), do: "Whatever"
+  def greet(%{age: age}) when is_elder(age), do: "You kids get off my lawn"
   def greet(_), do: "Hello"
 end
 ```
