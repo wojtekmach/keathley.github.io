@@ -77,7 +77,7 @@ This doesn't mean that Elixir functions **can't** be pure. In fact, most people 
 
 Elixir relies on Erlang and BEAM whenever possible. In fact one of Elixir's core design tenets is to never re-invent a solution to a problem Erlang has already solved. Pattern matching is no exception.
 
-Rather then recreate a pattern matching system Elixir uses Erlang's. Because of this Elixir gets the optimizations and efficiencies already built into Erlang's pattern matching. But it also means that it has to obey Erlang's rules.
+Rather than recreate a pattern matching system Elixir uses Erlang's. Because of this Elixir gets the optimizations and efficiencies already built into Erlang's pattern matching. But it also means that it has to obey Erlang's rules.
 
 Patterns are matched from the first definition to the last. The first function definition that matches is the function definition used. If those function definitions have guard clauses then the guard clause must be resolved before the next function definition can be tested.
 
