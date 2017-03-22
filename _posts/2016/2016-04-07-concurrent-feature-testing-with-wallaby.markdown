@@ -1,7 +1,7 @@
 ---
-layout: "post"
-title: "Concurrent Feature Testing with Wallaby”
-date: "2016-04-07 22:05"
+layout: post
+title: Concurrent Feature Testing with Wallaby
+date: 2016-04-07 22:05
 ---
 
 > This post was originally written for the Carbon Five blog. I'm cross-posting
