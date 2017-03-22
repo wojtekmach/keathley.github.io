@@ -1,6 +1,6 @@
 ---
 layout: "post"
-title: "concurrent-feature-testing-with-wallaby”
+title: "Concurrent Feature Testing with Wallaby”
 date: "2016-04-07 22:05"
 ---
 
