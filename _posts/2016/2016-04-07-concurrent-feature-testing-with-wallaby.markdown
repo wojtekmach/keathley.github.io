@@ -4,8 +4,7 @@ title: Concurrent Feature Testing with Wallaby
 date: 2016-04-07 22:05
 ---
 
-> This post was originally written for the Carbon Five blog. I'm cross-posting
-> it here only for posterity.
+> This post was originally written for the Carbon Five blog. I'm cross-posting it here  for posterity.
 
 Feature tests are one of the best ways to ensure reliability and consistency for web applications. But, [as we’ve discussed previously](http://blog.carbonfive.com/2016/03/01/concurrent-acceptance-testing-in-elixir/) feature tests can become a performance bottleneck for a large test suite.
 
