@@ -3,6 +3,7 @@ layout: post
 title:  "Setting the Isolation Level in Ecto Transactions"
 date:   2018-04-23 09:33:00
 categories: elixir ecto
+excerpt: Even in ACID databases you occasionally need to use stronger isolation guarantees.
 ---
 
 ## TL;DR
