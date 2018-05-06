@@ -20,7 +20,7 @@ body { height: 100%; }
 body {
   padding-right: 1em;
   padding-left: 1em;
-  font-family: "proxima-nova", "Helvetica", "sans-serif";
+  font-family: "Lora", "Times New Roman", serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 160%;
@@ -46,7 +46,10 @@ body {
 h1,
 h2,
 h3,
-h4 { font-weight: 600; }
+h4 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
 
 h1 { font-size: 2.5rem;   }
 h2 { font-size: 2rem;	}
@@ -69,6 +72,7 @@ p,
 p {
   margin: 0 0 1.5rem;
   font-size: 1.3rem;
+  line-height: 1.5;
 
   > a { box-shadow: 0 3px #CCCCCC; }
 
@@ -195,7 +199,7 @@ aside {
 
   .post-title {
     margin-bottom: 0;
-    font-size: 1.3em;
+    font-size: 1.8em;
     line-height: 1.3em;
 
     a {
@@ -203,18 +207,16 @@ aside {
       text-decoration: none;
 
       &:hover { color: $link-color; }
-		}
-
-    .date {
-      float: right;
-      margin-top: 0;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: lighten($base-color, 40);
-      text-transform: uppercase;
-
-      @media screen and (max-width: $break) { display: none; }
     }
+  }
+
+  .date {
+    margin-top: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: lighten($base-color, 40);
+
+    @media screen and (max-width: $break) { display: none; }
   }
 
   .post-excerpt { margin-top: 0.7rem; }
