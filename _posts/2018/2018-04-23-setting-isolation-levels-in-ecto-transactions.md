@@ -126,7 +126,7 @@ defmodule EctoIsolation.UnsafeTransaction do
 end
 ```
 
-With this setup I could run everything by calling `EctoIsolation.Coordinator.race(EctoIsolation.UnsafeTransaction)` in iex. 
+With this setup I could run everything right from iex like so:
 
 ```elixir
 iex(2)> EctoIsolation.Coordinator.race(EctoIsolation.UnsafeTransaction)
