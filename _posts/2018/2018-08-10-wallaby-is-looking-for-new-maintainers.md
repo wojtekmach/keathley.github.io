@@ -49,13 +49,13 @@ a point to not dictate technology choices for their clients. And at the
 time there weren't any Elixir contracts.
 
 During that time my only connection to Elixir was Wallaby. It provided
-a tangible link to this community I wanted so desperately be in. And
+a tangible link to this community I wanted so desperately to be in. And
 luckily for me the effort eventually paid off. I got to give a [talk at
 ElixirConf](https://www.youtube.com/watch?v=TjOXbDJ-yw8) about Wallaby. I got to
 speak at erlang factory (back when it was still called erlang factory) and
 ElixirDaze. Traveling to conferences enabled me to meet other Elixir folks
 like my dear friend Lance Halvorsen. Not only did Lance introduce me to
-Mission Chinese but he trusted me enough to help get me get my first Elixir job.
+Mission Chinese but he trusted me enough to help me get my first Elixir job.
 I got to meet people like Ben Marx, Johnny Winn, James Fish, Dave Thomas,
 Paul Lamb, Jeff Weiss, Amos King, Anna Neyzberg, Saša Jurić, Sonny
 Scroggin, Greg Mefford, Paul Schoenfelder, Fred Hebert, Josh Adams and
