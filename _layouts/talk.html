@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="talk-content" id="talk">
+  <h1 class="title">{{ page.title }}</h1>
+
+  <h2 class="given-on">{{ page.date | date: "%B %-d, %Y" }}</h2>
+
+  <div class="description">
+    {{ content }}
+  </div>
+</div>
