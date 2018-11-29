@@ -1,7 +1,7 @@
 ---
 layout: talk
 title: "Building Resilient Systems with Stacking Theory"
-date:   2018-08-10 10:06:00
+date:   2018-10-26
 ---
 
 When you're building large scale systems failure is inevitable. Whether its dropped network connections, misbehaving hardware, massive GC pauses, or AWS outages our services should be able to weather the storm. At Bleacher Report we need to handle large scale traffic while also handling whatever transient failures come our way. To achieve this goal we've been exploring a design technique called Stacking Theory.

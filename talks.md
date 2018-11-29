@@ -34,9 +34,9 @@ title: Talks - Chris Keathley
 
 <section class="content">
   I've been fortunate to get to travel around and share some of my ideas with people.
-
   <ul class="talks">
-  {% for talk in site.talks %}
+  {% assign sortedTalks = site.talks | sort: 'date' %}
+  {% for talk in sortedTalks reversed %}
     <li class="talk">
       <span class="date">{{ talk.date | date: "%b %Y" }}</span>
       <h1 class="talk-title">
