@@ -34,6 +34,88 @@ body {
   }
 }
 
+.wide-body {
+  padding-right: 0;
+  padding-left: 0;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.wide-container {
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto;
+
+  .header {
+    padding-top: 16px;
+    max-width: $break;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: $break;
+    margin: 0 auto;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  .footer {
+    max-width: $break;
+    margin: 0 auto;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+.hero-image {
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 2rem;
+
+  .header a {
+    color: white;
+
+    &:hover { color: $link-color; }
+  }
+
+  @media screen and (min-width: $break) {
+    margin-bottom: 5rem;
+  }
+
+  & > .title-wrapper {
+    text-align: center;
+    padding-top: 6rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+
+    @media screen and (min-width: $break) {
+      text-align: left;
+      padding-top: 20rem;
+      // padding-right: 4rem;
+      padding-bottom: 4rem;
+      // padding-left: 4rem;
+      margin: 0 auto;
+      max-width: $break;
+    }
+  }
+
+  .title {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    font-size: 2rem;
+    color: white;
+    background-color: #2f2f2f;
+    display: inline-block;
+
+    @media screen and (min-width: $break) {
+      font-size: 5rem;
+    }
+  }
+}
+
+
 .container {
   width: 100%;
   max-width: $break;
@@ -52,11 +134,12 @@ h4 {
 }
 
 h1 { font-size: 2.5rem;   }
-h2 { font-size: 2rem;	}
-h3 { font-size: 1.2rem;	}
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.2rem; }
 h4 { font-size: 1rem;   }
 
-h1 { line-height: 2.5rem; }
+h1 { line-height: 1.2; }
+h2 { line-height: 1.4; }
 
 p,
 .highlighter-rouge {
@@ -101,7 +184,7 @@ a {
   &:hover { color: $link-color; }
 }
 
-img {
+a > img {
   width: 100%;
   display: block;
   margin-top: 4rem;
@@ -157,13 +240,49 @@ thead > tr > th { border-bottom: 2px solid #ddd; }
 tbody > tr > td { border-top: 1px solid #ddd; }
 
 header {
+  text-align: center;
+
+  @media screen and (min-width: $break) {
+    text-align: left;
+  }
+
   .site-header {
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 1.4rem;
+    font-weight: 800;
+
+    @media screen and (min-width: $break) {
+      display: inline-block;
+      font-size: 1.6rem;
+    }
   }
 
-  h3,
+  h3 {
+    @media screen and (min-width: $break) {
+      display: inline-block;
+    }
+  }
+
+  h4 {
+    margin-top: 0;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+    }
+
+    @media screen and (min-width: $break) {
+      &:not(:last-child) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  nav {
+    margin-top: 0;
+  }
+
 	h4,
 	nav { display: inline-block; }
 
@@ -171,6 +290,7 @@ header {
     margin-right: 6px;
     margin-left: 6px;
     color: $base-color;
+    font-weight: 300;
   }
 }
 
@@ -186,6 +306,33 @@ aside {
   > p { margin-bottom: 0; }
 }
 
+.talks {
+  margin-top: 3rem;
+  padding-left: 0;
+  list-style: none;
+
+  .talk {
+    padding-bottom: 1em;
+    display: flex;
+
+    .date {
+      flex: 0 0 auto;
+      font-size: 0.9rem;
+
+      @media screen and (min-width: $break) {
+        font-size: 1.1rem;
+      }
+    }
+
+    .talk-title {
+      font-size: 1.4rem;
+      display: inline-block;
+      padding-left: 1.3rem;
+      margin-top: 0;
+    }
+  }
+}
+
 .posts {
   padding-left: 0;
   list-style: none;
@@ -199,7 +346,7 @@ aside {
 
   .post-title {
     margin-bottom: 0;
-    font-size: 1.8em;
+    font-size: 1.5rem;
     line-height: 1.3em;
 
     a {
@@ -219,7 +366,10 @@ aside {
     @media screen and (max-width: $break) { display: none; }
   }
 
-  .post-excerpt { margin-top: 0.7rem; }
+  .post-excerpt {
+    margin-top: 0.7rem;
+    p { font-size: 1.1rem; }
+  }
 }
 
 .date {
@@ -237,12 +387,49 @@ aside {
   margin-bottom: 1rem;
 }
 
+.post-body > .title {
+  text-align: left;
+  margin-bottom: 5rem;
+}
+
 blockquote {
-  box-shadow: inset 0.5rem 0 $base-color;
+  box-shadow: inset 0.3rem 0 $base-color;
   margin-left: 0;
 
+  @media screen and (min-width: $break) {
+    box-shadow: inset 0.4rem 0 $base-color;
+  }
+
   & > p {
-    padding-left: 2.5rem;
+    padding-left: 1rem;
     font-style: italic;
+
+    @media screen and (min-width: $break) {
+      padding-left: 1.3rem;
+    }
+  }
+}
+
+.rss-link {
+  display: none;
+
+  @media screen and (min-width: $break) {
+    display: inline-block;
+  }
+}
+
+.talk-content {
+  .title {
+    margin-bottom: 0;
+    font-size: 3.2rem;
+  }
+
+  .given-on {
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+
+  .description {
+    margin-top: 5rem;
   }
 }
