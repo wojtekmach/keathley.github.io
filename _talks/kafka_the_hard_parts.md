@@ -1,7 +1,7 @@
 ---
 layout: talk
 title: "Kafka, The Hard Parts"
-data: 2019-01-10
+date: 2019-01-10
 ---
 
 This talk was my attempt to distill several of the hard won lessons I've
