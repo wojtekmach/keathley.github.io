@@ -4,7 +4,6 @@ title:  "Soft deletion with Ecto"
 date:   2019-01-10 04:07:00
 categories: elixir ecto
 ---
-
 A common need in web applications is to "undo" a deletion event. This is referred
 to as a soft-deletion. The record still exists but its hidden from the user.
 Soft deleting allows the user to restore that data in the event that they need it in
