@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/keathley
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://keathley.io
+  * I am keathley (https://keybase.io/keathley) on keybase.
+  * I have a public key with fingerprint 127E 4801 6473 B025 9666  DDEC 646E F51E 2C11 C8A1
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01207021cab541e6ce571be57822caa1240bbdd5d4abe547116555c080587c2e28e30a",
+      "fingerprint": "127e48016473b0259666ddec646ef51e2c11c8a1",
+      "host": "keybase.io",
+      "key_id": "646ef51e2c11c8a1",
+      "kid": "0101116c5b42b301a113767d4688236453c0640f61418eb6164f660e0bb1ca446fcf0a",
+      "uid": "31743ed591cd9e54fdc1d64eba82e119",
+      "username": "keathley"
+    },
+    "service": {
+      "hostname": "keathley.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1548287188,
+  "expire_in": 157680000,
+  "prev": "f5caea365673f002be0a770f2532ac72cb6f1133817b3a5883278a4487328efa",
+  "seqno": 24,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.80
+Comment: https://keybase.io/crypto
+
+yMNrAnicbVJ7UFRVHF7kNWzyTAgxC24huJHec98sqTuio8kU0wgOkcN6H+fCjXV3
+3b28JNapQQSm5GFA4ZiRMkGTU7MgkWwzPjBwthVE6MEMZdikEgnDuKANYmcp/2k6
+f5wz53e+33e+7zunP9Rfo/WTzN5nUiIH2/zcF1qKNHt3Lo6WY4JFKsP05VghXF6g
+SYJ21VioSJgewwGBszgBRF6gKQAZEdIsENDEEYTI84CgcEGQJFqieFSlWAAYmqZF
+nMNpjhUJSHCQxHksBZMVcz60WW2KWUW0gGAhxeGAoVhSwAk6lWEYSYIiQzFQpgEk
+RABEjgeoscBi93UgcQJvhxsUC6qhjXFZ3v/gH+vGAdIi0gJFCCQOeABIlmEliuE4
+gmQomhRxhsJlBlCAgwKDlMgMg0PkBnmlKEYW5WXdRct0JGApEkp0KhClVORTlkQg
+MRQUeI6AAKT6gHZoM/P74bJWXi0woTQrUjBULVZE6AvW5+Q/iH/sWG0W1SJaTOig
+QFWtdr2vUS2z+pAlUDD+y2EUFLOEYkQdxdBmVyxmTA8QUlQVHymgKY7gWMBxKRgs
+tSo2aFR8CJplOBwN3z2wGFHKtMhDnmRohiVlHCcEiPMsi8sETRK8yBKiwMgoLpID
+rEDyNMeRBMuhTDiWRM8p+1KxwwNmC6YnKKSTz0ecdiXfzKtFNohVXLywN0Djp9UE
+Ba7w/S+NNiTi8a9zbg5/tNsZePCc89TsobjVQbVxsw3hR6J+6+vqH131uuZR3tWp
+ZOag+cTRgYH3LnnuSUP7HD3q5CHMsGDQ3anM2Vr1znxVQp8ptGti8fKOqNmA/KRO
+b9ZoJ2i05MbedsY2nJjIrm4IO3uk/t5k//m+km/4DyY36p4ISWxPJiNshb3w7K7u
+ukFhakfnPBXndjxbvu5k8lBIaL1b+3JGQ6F1oSs93PDXuuvONFK9eydhOjQ6Pd3q
+iXxjzZX68dYVba+5YpSVHQ/8c2fuelqz5IQrP3YYvzidYRr75emRzKk/14rZo0Ht
+W6O6m3QwnHMfKI5/6Viwff344YWl6QentlV/9oIhN7rJVflzJXa9mVjyDrfc8PZf
+qinozNBf1Qx/8nFaNdz+XEVabNLETHpMYlvF4sC1gAbd9zOO6vOHp4cq5072/9Qc
+veftbPfpy/GW9e//fuxVzeJHYW3vevZsmjaMOsNvJr7Zk+m3ue7J6I1Vrual0rQv
+3cFNTdLc7L6HpjxPy9ox//svZqU6jo8cVW/t137uKls1rndvewv8GtjVUpsTfT+h
+t+bGbucfg4XStfK5DV+t+cGhe2r45q6cni2lQT2uPMhE1mk93a6ywe+2jxHf6j6M
+CCfMq0N6jzQ9HFmZlblz09deQ2NAcMnFgdYtjvZzt185Lmjmw87UJEV0eG8lxH/a
+eEZx0LVLMc//DVf1v8I=
+=tcbJ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/keathley
+
+==================================================================
+
