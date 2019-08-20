@@ -2,6 +2,8 @@
 layout: "post"
 title: "Using Functions in Elixir Guard Clauses"
 date: "2016-04-09 20:29"
+redirect_from:
+  - /2016/04/09/elixir-guard-clauses
 ---
 
 Elixir, like other pattern matched languages, supports guard clauses. Inside a guard we can use a set of Kernel functions and other predicates. Using any other function in a guard clause results in an error. Here's an example to show what I mean.

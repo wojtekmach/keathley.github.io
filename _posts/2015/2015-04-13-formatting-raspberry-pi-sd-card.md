@@ -3,6 +3,8 @@ layout: post
 title:  "Flashing Raspberry Pi on Mac"
 date:   2015-04-13 11:51:13
 categories: raspberrypi
+redirect_from:
+  - /raspberrypi/2015/04/13/formatting-raspberry-pi-sd-card
 ---
 
 I just got a Raspberry Pi 2 for me and my daughter to hack around on.

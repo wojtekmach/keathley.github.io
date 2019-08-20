@@ -3,6 +3,8 @@ layout: post
 title:  "Building an Atreus"
 date:   2015-05-31 23:00:00
 categories: Keyboards Atreus DIY
+redirect_from:
+  - /keyboards/atreus/diy/2015/05/31/Building-a-Keyboard
 ---
 
 I've always been obsessed with keyboards. The first large purchase I made when I had a "real job" was a matte black [Das Keyboard Ultimate](http://www.daskeyboard.com/model-s-ultimate/) with MX Cherry Blue switches. That keyboard has been with me for years now and its served me well.

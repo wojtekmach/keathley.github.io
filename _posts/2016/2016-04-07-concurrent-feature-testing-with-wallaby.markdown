@@ -2,6 +2,8 @@
 layout: post
 title: Concurrent Feature Testing with Wallaby
 date: 2016-04-07 22:05
+redirect_from:
+  - /2016/04/07/concurrent-feature-testing-with-wallaby
 ---
 
 > This post was originally written for the Carbon Five blog. I'm cross-posting it here  for posterity.

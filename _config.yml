@@ -11,9 +11,13 @@ rouge:
 line_numbers: true
 description: This is where I think things.  Sometimes it's about code.  Sometimes that code works.
 url: http://keathley.github.io
+permalink: /blog/:title:output_ext
 collections:
   talks:
     output: true
-gems:
+plugins:
   - octopress-autoprefixer
   - jekyll-feed
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from

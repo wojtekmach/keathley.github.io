@@ -3,6 +3,8 @@ layout: post
 title:  "Phoenix: The difference between web and lib"
 date:   2016-01-14 1:12:00
 categories: elixir phoenix
+redirect_from:
+  - /elixir/phoenix/2016/01/14/phoenix-directories
 ---
 
 In Phoenix we have 2 distinct places to put our code: the `web` directory and the `lib` directory. If you’re coming from another framework like Rails then it might be tempting to think of `web` as your `app` directory and `lib` as a junk drawer of miscellaneous modules and tasks.

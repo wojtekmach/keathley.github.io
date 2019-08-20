@@ -4,6 +4,8 @@ title:  "Wallaby needs a new maintainer"
 date:   2018-08-10 10:06:00
 categories: elixir wallaby
 excerpt: I don't have time to dedicate to Wallaby and I'm looking for someone to take over as the maintainer.
+redirect_from:
+  - /elixir/wallaby/2018/08/10/wallaby-is-looking-for-new-maintainers
 ---
 
 ## TL;DR

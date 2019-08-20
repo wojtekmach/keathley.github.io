@@ -3,6 +3,8 @@ layout: post
 title:  "DateTime.parse is not a validater"
 date:   2013-06-25 20:51:13
 categories: ruby
+redirect_from:
+  - /ruby/2013/06/25/DateTime-parse-validation
 ---
 
 I am prototyping a rails API at work and one of my routes accepts a datetime parameter.  I assumed that I would be able to just use DateTime.parse and that would take care of any sanitization of the parameters.
