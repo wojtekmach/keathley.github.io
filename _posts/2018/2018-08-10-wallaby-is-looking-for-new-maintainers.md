@@ -8,6 +8,11 @@ redirect_from:
   - /elixir/wallaby/2018/08/10/wallaby-is-looking-for-new-maintainers
 ---
 
+> 2019-11-02 - Since I've written this post both Mitchell Hanberg and Michał Łępicki
+> have stepped up to help maintain Wallaby. I'm going to leave this blog post up
+> for posterity but in reality the project is now in very capable hands and is
+> more active than its been in a long time.
+
 ## TL;DR
 
 I don't have the time to maintain Wallaby in the way that it needs to be
