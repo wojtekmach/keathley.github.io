@@ -1,22 +1,20 @@
 ---
 layout: post
-title: "Reusable elixir libraries."
-date:   2020-01-17 09:09:00
+title: "Reusable Elixir Libraries"
+date:   2020-02-08 10:00:00
 categories: elixir library design
 ---
 
 One of my new goals is to try to make my elixir libraries more reusable. It's an easy mark to hit if you only use modules and functions. But once you start adding processes, ETS tables, and other stateful constructs, the solutions get murky.
 
-After a few discussions online, I thought it would be good to write out my thoughts and explain some of the patterns that I've been using. There are probably other, better solutions. But these are the ones that I use. I'm going to use the term "library" throughout this post, but none of these techniques are limited to libraries in the traditional sense. I use all of these methods when building components or subsystems at work.
+I thought it would be good to write out my thoughts and explain some of the patterns that I've been using. There are probably other, better solutions. But these are the ones that I use. I'm going to use the term "library" throughout this post, but none of these techniques are limited to libraries in the traditional sense. I use all of these methods when building components or subsystems at work.
 
 ## OTP Applications
 
-This one is the easiest but also the most limiting. If you only provide an OTP application, then your users don't have to worry about configuring
-anything, and the API is typically more straightforward. But OTP Apps are singletons. You need to ensure that your application supports multiple users without conflicting with each other. Configuration - certainly non-global configuration - is complex.
+This solution is the easiest but also the most limiting. If you only provide an OTP application, then your users don't have to worry about configuring
+anything, and the API is typically more straightforward. But OTP Apps are singletons. Configuration becomes much more complicated, the user has limited control, and you risk colliding with other libraries who are also dependent on your app. But an OTP app's most significant drawbacks are also its biggest strengths. There might not be any *need* for the user to provide configuration. Maybe the supervision strategy is complex, and it would be error-prone to ask the user to manage it themselves. You need to look at your objectives and decide the best approach.
 
-Configuration becomes much more complicated, the user cannot supervise the application, and you risk colliding with other libraries who are also dependent on the application. But an OTP app's most significant drawbacks are also its biggest strengths. It may not be appropriate for the user to configure the application. Maybe the supervision strategy is complex, and it would be error-prone to ask the user to manage it themselves. You need to look at your objectives and decide the best approach.
-
-The majority of times that I've built a library that only provided an application, I've ended up changing it. But that probably says more about me than it says anything about OTP apps.
+Anecdotally, the majority of times that I've built a library that only provided an OTP app, I've ended up changing it. But that probably says more about me than it says anything about OTP apps.
 
 ## Starting with a single process
 
@@ -62,9 +60,9 @@ defmodule Cache do
 end
 ```
 
-That's it! That's the entire trick. We rely on the name
-registration rules that other special processes use. Our users are now free
-to start a cache however they want:
+That's it! That's the entire trick. We simply rely on the name
+registration rules that other OTP processes use. Our users are now free
+to start a cache however they want.
 
 ```elixir
 # Access with pid
@@ -78,7 +76,7 @@ Cache.put(MyCache, :foo, "foo")
 123 = Cache.get(MyCache, :foo)
 ```
 
-Unit testing is simple and isolated:
+Unit testing is simple and isolated.
 
 ```elixir
 defmodule CacheTest do
@@ -120,19 +118,23 @@ end
 
 ## Providing a supervision tree
 
-This strategy is simple when you only need to provide a single process.
+This strategy is obvious when you only need to provide a single process.
 But if you need to provide a set of processes with a supervisor, then
 things get more complicated.
 
-For instance, if we really wanted to provide a robust cache, then we'd
+For instance, if we wanted to provide a more robust cache, then we'd
 want to use an ETS table. We could start the ETS table inside of our cache process, but if the cache process crashes, we'll also lose the ETS table. A better approach would be to start both the ETS table and the writing process underneath a supervisor like so.
 
-PICTURE OF SYSTEM GOES HERE.
+<a href='/assets/images/reusablelibs/supervision_tree.jpg'>
+  <img src='/assets/images/reusablelibs/supervision_tree.jpg' alt='supervision tree'/>
+</a>
 
-The problem with this approach is that it becomes difficult for the
+The problem with this approach is that its difficult for the
 supervisor's children to identify and communicate with one another. There
 are some smart ways we could solve the problem, but my preference is to
-do something dumb and easy. We're going to require that users pass in a `:name` when they start a cache. This requirement reduces our flexibility, but in my experience, it's a reasonable tradeoff to make.
+do something dumb and easy. 
+
+We're going to require that users pass in a `:name` when they start a cache. We'll then used the passed in name to derive names for the supervisors children. By naming all of the processes in this way the siblings will all be able to find each other. This requirement reduces our flexibility, but in my experience, it's a reasonable tradeoff to make.
 
 We'll start by converting our API to a supervisor.
 
@@ -148,7 +150,7 @@ defmodule Cache do
   end
 
   def start_link(opts) do
-    name = opts[:name] || raise ArgumentError, "name is required"
+    name = opts[:name] || raise ArgumentError, "Cache name is required"
     Supervisor.start_link(__MODULE__, opts, name: name)
   end
 
@@ -224,9 +226,9 @@ end
 ```
 
 These changes aren't too dramatic. All "gets" go directly to the ETS
-table and "puts" go to the storage process. It may seem awkward to split reads and writes this way. In some cases, it might make more sense to have the client send writes and reads directly to ETS and skip the process. Or invert the logic and have everything go through a process. I use this approach when I have low write throughput and high read throughput because it makes it easier to implement logic like key eviction or CAS operations.
+table and "puts" go to the storage process. It may seem awkward to split reads and writes this way. In some cases, it might make more sense to have the client send writes and reads directly to ETS and skip the process. Or invert the logic and have everything go through a process. I use the split approach for read heavy workloads because it makes it easier to implement logic like key eviction or CAS operations.
 
-With those changes done, we've isolated our errors. If the storage process crashes, we won't lose the values in our ETS table.
+With those changes done, we've successfully isolated our errors. If the storage process crashes, we won't lose the values in our ETS table.
 
 ```elixir
 iex(4)> Cache.put(PrimaryCache, :foo, "bar")
@@ -318,12 +320,7 @@ end
 
 ## Conclusion
 
-I hope that this has given you some ideas about how to build more
-reusable, stateful libraries. There are tons more out there, all with
-different tradeoffs. But most of the time, these simple approaches are all
-you need. Regardless of which solution you choose, I hope this
-demonstrates that you can provide a friendly API, which gives users more
-control and doesn't give up isolation. If you follow these patterns your
-APIs are going to be more reusable and will provide a better foundation
-for others to build on.
+I hope that this has given you some ideas about how to build more reusable, stateful libraries. There are tons more out there, all with different tradeoffs. But most of the time, these simple approaches are all you need. Regardless of which solution you choose, I hope this demonstrates that you can provide a friendly API, which gives users more control and doesn't give up isolation. If you follow these patterns
+your APIs are going to be more reusable and will provide a better
+foundation for others to build on.
 
